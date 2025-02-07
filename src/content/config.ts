@@ -1,5 +1,6 @@
 import { defineCollection, z } from 'astro:content';
 import { glob, file } from 'astro/loaders';
+
 const projectsSchema = z.object({
   id: z.string(),
   name: z.string(),
@@ -10,9 +11,18 @@ const projectsSchema = z.object({
   category: z.enum(['project', 'website', 'talk'])
 });
 
+const blogSchema = z.object({
+  title: z.string(),
+  date: z.string(),
+});
+
 export const collections = {
   'projects': defineCollection({
     loader: glob({ pattern: "**/*.json", base: "./src/content/projects" }),
     schema: projectsSchema
+  }),
+  'blog': defineCollection({
+    type: 'content',
+    schema: blogSchema,
   })
 };
