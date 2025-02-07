@@ -18,12 +18,8 @@ const { title = "Yuval Adam" } = Astro.props;
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap">
 		<title>{title}</title>
 	</head>
-	<body class="bg-black text-white">
-		<div class="fixed top-0 left-0 w-full h-full grid grid-cols-[1fr,2fr] md:grid-cols-[1fr,1fr,2fr] opacity-5">
-			{Array(6).fill(0).map(() => (
-				<div class="border-l border-white h-full"></div>
-			))}
-		</div>
+	<body class="bg-[#9DB3C4] text-slate-900">
+		<div class="fixed top-0 left-0 w-full h-2 bg-[#B8CFE5] border-b border-[#4A6B8C]"></div>
 		<slot />
 	</body>
 </html>
@@ -35,6 +31,14 @@ const { title = "Yuval Adam" } = Astro.props;
 
 	html {
 		font-family: 'Space Mono', monospace;
+	}
+
+	.cde-panel {
+		@apply bg-[#9DB3C4] border-t-2 border-l-2 border-[#B8CFE5] border-b-2 border-r-2 border-[#4A6B8C];
+	}
+
+	.cde-panel-inset {
+		@apply bg-[#9DB3C4] border-t-2 border-l-2 border-[#4A6B8C] border-b-2 border-r-2 border-[#B8CFE5];
 	}
 
 	@keyframes slideIn {

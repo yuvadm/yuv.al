@@ -3,75 +3,63 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout>
-	<div class="relative min-h-screen">
-		<!-- Red square accent -->
-		<div class="absolute top-0 right-0 w-1/3 aspect-square bg-red-600 -z-10"></div>
-		
-		<main class="container mx-auto px-4 min-h-screen grid grid-cols-12 gap-4">
-			<!-- Left margin area -->
-			<div class="hidden md:block col-span-1 border-l border-white/20 h-screen"></div>
-			
-			<!-- Main content area -->
-			<div class="col-span-12 md:col-span-10 py-12">
-				<div class="space-y-24">
-					<!-- Header section -->
-					<div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-						<div class="slide-in [animation-delay:0.2s] opacity-0">
-							<p class="text-xs tracking-[0.5em] text-white/60 pl-1">DIGITAL CRAFTSMAN</p>
-							<h1 class="text-[8vw] md:text-[6vw] font-bold leading-none mt-2">
-								YUVAL<br/>
-								<span class="text-red-600">ADAM</span>
-							</h1>
-						</div>
-						<div class="slide-in [animation-delay:0.4s] opacity-0">
-							<div class="border border-white/20 p-8">
-								<p class="font-mono text-sm leading-relaxed">
-									In pursuit of digital excellence since 1984
-								</p>
-							</div>
-						</div>
+	<div class="relative min-h-screen p-4">
+		<main class="container mx-auto">
+			<!-- Header panel -->
+			<div class="cde-panel p-4 mb-4">
+				<div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+					<div class="slide-in [animation-delay:0.2s] opacity-0">
+						<p class="text-xs tracking-[0.5em] text-[#5D3A1A] font-bold pl-1">DIGITAL CRAFTSMAN</p>
+						<h1 class="text-[8vw] md:text-[6vw] font-bold leading-none mt-2">
+							YUVAL<br/>
+							<span class="text-[#A0522D]">ADAM</span>
+						</h1>
 					</div>
-
-					<!-- Content section -->
-					<div class="grid grid-cols-12 gap-8">
-						<div class="col-span-12 md:col-span-8 slide-in [animation-delay:0.6s] opacity-0">
-							<div class="space-y-8">
-								<p class="text-2xl font-light leading-relaxed">
-									The intersection of art and technology is where innovation thrives. Here, in this digital atelier, pixels are sculpted and code is composed with precision and purpose.
-								</p>
-								<div class="pl-8 border-l-2 border-red-600">
-									<p class="text-lg text-white/70">
-										Each project is an exploration of form and function, where mathematical elegance meets visual harmony. The goal is not just to write code, but to craft experiences that resonate.
-									</p>
-								</div>
-							</div>
+					<div class="slide-in [animation-delay:0.4s] opacity-0">
+						<div class="cde-panel-inset p-6">
+							<p class="font-mono text-sm leading-relaxed text-[#2F4F4F]">
+								In pursuit of digital excellence since 1984
+							</p>
 						</div>
-						
-						<div class="col-span-12 md:col-span-4 slide-in [animation-delay:0.8s] opacity-0">
-							<div class="aspect-square bg-white/5 p-8 flex items-end">
-								<a 
-									href="https://github.com/yuvadm" 
-									target="_blank"
-									rel="noopener noreferrer" 
-									class="text-sm tracking-widest hover:text-red-600 transition-colors duration-300"
-								>
-									GITHUB/YUVADM →
-								</a>
-							</div>
-						</div>
-					</div>
-
-					<!-- Footer section -->
-					<div class="border-t border-white/20 pt-8 slide-in [animation-delay:1s] opacity-0">
-						<p class="text-xs tracking-widest text-white/40">
-							ESTABLISHED 2025 • CRAFTED WITH PURPOSE
-						</p>
 					</div>
 				</div>
 			</div>
 
-			<!-- Right margin area -->
-			<div class="hidden md:block col-span-1 border-r border-white/20 h-screen"></div>
+			<!-- Content panels -->
+			<div class="grid grid-cols-12 gap-4">
+				<div class="col-span-12 md:col-span-8">
+					<div class="cde-panel p-6 space-y-8 slide-in [animation-delay:0.6s] opacity-0">
+						<p class="text-2xl font-light leading-relaxed text-[#2F4F4F]">
+							The intersection of art and technology is where innovation thrives. Here, in this digital atelier, pixels are sculpted and code is composed with precision and purpose.
+						</p>
+						<div class="cde-panel-inset p-4">
+							<p class="text-lg text-[#2F4F4F]">
+								Each project is an exploration of form and function, where mathematical elegance meets visual harmony. The goal is not just to write code, but to craft experiences that resonate.
+							</p>
+						</div>
+					</div>
+				</div>
+				
+				<div class="col-span-12 md:col-span-4 slide-in [animation-delay:0.8s] opacity-0">
+					<div class="cde-panel aspect-square p-6 flex items-end bg-[#B96D3C]">
+						<a 
+							href="https://github.com/yuvadm" 
+							target="_blank"
+							rel="noopener noreferrer" 
+							class="text-sm tracking-widest text-white hover:text-[#E8D0A9] transition-colors duration-300"
+						>
+							GITHUB/YUVADM →
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<!-- Footer panel -->
+			<div class="cde-panel-inset mt-4 p-4 slide-in [animation-delay:1s] opacity-0">
+				<p class="text-xs tracking-widest text-[#2F4F4F]">
+					ESTABLISHED 2025 • CRAFTED WITH PURPOSE
+				</p>
+			</div>
 		</main>
 	</div>
 </Layout>
