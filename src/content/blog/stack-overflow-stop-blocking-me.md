@@ -1,6 +1,5 @@
 ---
 date: '2012-03-11'
-layout: post
 tags: null
 title: Stack Overflow, stop blocking me
 ---

@@ -1,6 +1,5 @@
 ---
 date: '2011-11-27'
-layout: post
 tags: null
 title: 28C3 Talk
 ---

@@ -2,7 +2,6 @@
 categories: null
 comments: true
 date: '2012-08-16'
-layout: post
 title: Flask and PostgreSQL on Heroku
 ---
 

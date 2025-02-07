@@ -1,6 +1,5 @@
 ---
 date: '2011-04-29'
-layout: post
 tags: null
 title: Installing JPype on Mac OS X
 ---

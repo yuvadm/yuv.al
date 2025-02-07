@@ -2,7 +2,6 @@
 categories: null
 comments: true
 date: '2014-03-27'
-layout: post
 title: Windows XP Installation Revisited
 ---
 

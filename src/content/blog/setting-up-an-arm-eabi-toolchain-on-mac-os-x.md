@@ -2,7 +2,6 @@
 categories: null
 comments: true
 date: '2012-10-07'
-layout: post
 title: Setting up an ARM EABI toolchain on Mac OS X
 ---
 

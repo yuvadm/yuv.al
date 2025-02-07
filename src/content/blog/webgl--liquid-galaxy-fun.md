@@ -1,6 +1,5 @@
 ---
 date: '2012-05-20'
-layout: post
 tags: null
 title: WebGL / Liquid Galaxy Fun
 ---

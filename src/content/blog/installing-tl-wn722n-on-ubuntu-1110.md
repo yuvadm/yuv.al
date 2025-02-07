@@ -1,6 +1,5 @@
 ---
 date: '2011-10-23'
-layout: post
 tags: null
 title: Installing TL-WN722N on Ubuntu 11.10
 ---

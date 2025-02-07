@@ -1,6 +1,5 @@
 ---
 date: '2011-07-20'
-layout: post
 tags: null
 title: Data Mining the Israeli Population Census
 ---

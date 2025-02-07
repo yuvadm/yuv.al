@@ -1,6 +1,5 @@
 ---
 date: '2011-04-22'
-layout: post
 tags: null
 title: Two-Week Facebook Hiatus
 ---

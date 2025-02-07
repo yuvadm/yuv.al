@@ -2,7 +2,6 @@
 categories: null
 comments: true
 date: '2015-09-13'
-layout: post
 title: Deploying a Large Open-Source Wireless Network
 ---
 

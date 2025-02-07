@@ -1,6 +1,5 @@
 ---
 date: '2012-06-08'
-layout: post
 tags: null
 title: A modern Python stack for a real-time web application
 ---

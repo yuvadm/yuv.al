@@ -2,7 +2,6 @@
 categories: null
 comments: true
 date: '2014-01-10'
-layout: post
 title: Dokku as an Heroku replacement
 ---
 

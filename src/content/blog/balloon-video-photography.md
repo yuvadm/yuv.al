@@ -1,6 +1,5 @@
 ---
 date: '2011-09-06'
-layout: post
 tags: null
 title: Balloon Video Photography
 ---

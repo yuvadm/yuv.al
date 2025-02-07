@@ -1,6 +1,5 @@
 ---
 date: '2011-09-23'
-layout: post
 tags: null
 title: Roomba Hacking
 ---

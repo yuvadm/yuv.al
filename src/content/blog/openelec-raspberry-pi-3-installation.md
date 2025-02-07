@@ -2,7 +2,6 @@
 categories: null
 comments: true
 date: '2017-05-23'
-layout: post
 title: OpenELEC Installation on Raspberry Pi 3
 ---
 

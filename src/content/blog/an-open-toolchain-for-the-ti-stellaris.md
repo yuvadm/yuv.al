@@ -2,7 +2,6 @@
 categories: null
 comments: true
 date: '2012-10-29'
-layout: post
 title: An Open Toolchain for the TI Stellaris
 ---
 

@@ -2,7 +2,6 @@
 categories: null
 comments: true
 date: '2013-01-03'
-layout: post
 title: (Re)building the Cryptoparty Community
 ---
 

@@ -2,7 +2,6 @@
 categories: null
 comments: true
 date: '2013-10-24'
-layout: post
 title: Make your printer go wireless for $20
 ---
 

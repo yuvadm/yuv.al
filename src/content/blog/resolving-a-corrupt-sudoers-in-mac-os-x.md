@@ -1,6 +1,5 @@
 ---
 date: '2012-01-06'
-layout: post
 tags: null
 title: Resolving a Corrupt sudoers in Mac OS X
 ---

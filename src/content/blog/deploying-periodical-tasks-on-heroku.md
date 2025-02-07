@@ -2,7 +2,6 @@
 categories: null
 comments: true
 date: '2012-11-16'
-layout: post
 title: Deploying Periodical Tasks on Heroku
 ---
 

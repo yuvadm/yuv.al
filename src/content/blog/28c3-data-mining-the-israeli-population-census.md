@@ -1,6 +1,5 @@
 ---
 date: '2011-12-28'
-layout: post
 tags: null
 title: '28C3: Data Mining the Israeli Population Census'
 ---

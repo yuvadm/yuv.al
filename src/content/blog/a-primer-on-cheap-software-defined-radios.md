@@ -2,7 +2,6 @@
 categories: null
 comments: true
 date: '2012-12-02'
-layout: post
 title: A Primer on Cheap Software Defined Radios
 ---
 

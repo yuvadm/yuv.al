@@ -1,6 +1,5 @@
 ---
 date: '2012-01-03'
-layout: post
 tags: null
 title: Bitcoin for Dummies
 ---

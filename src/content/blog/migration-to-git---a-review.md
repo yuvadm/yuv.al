@@ -1,6 +1,5 @@
 ---
 date: '2011-07-29'
-layout: post
 tags: null
 title: Migration to Git - A Review
 ---

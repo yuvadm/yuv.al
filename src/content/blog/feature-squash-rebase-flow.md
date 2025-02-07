@@ -1,6 +1,5 @@
 ---
 date: '2011-05-02'
-layout: post
 tags: null
 title: Feature-squash-rebase Flow
 ---

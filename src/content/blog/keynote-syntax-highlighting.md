@@ -1,6 +1,5 @@
 ---
 date: '2011-11-11'
-layout: post
 tags: null
 title: Keynote Syntax Highlighting
 ---

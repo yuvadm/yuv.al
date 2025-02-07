@@ -2,7 +2,6 @@
 categories: null
 comments: true
 date: '2014-08-10'
-layout: post
 title: Huawei HG610 Capacitor Replacement
 ---
 

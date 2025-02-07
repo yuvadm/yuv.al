@@ -1,6 +1,5 @@
 ---
 date: '2011-11-01'
-layout: post
 tags: null
 title: Setting up an iodine IP-over-DNS proxy
 ---

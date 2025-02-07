@@ -2,7 +2,6 @@
 categories: null
 comments: true
 date: '2014-04-24'
-layout: post
 title: Feeding data to flightradar24.com
 ---
 

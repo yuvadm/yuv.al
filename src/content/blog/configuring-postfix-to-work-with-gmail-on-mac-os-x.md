@@ -1,6 +1,5 @@
 ---
 date: '2012-01-11'
-layout: post
 tags: null
 title: Configuring postfix to work with Gmail on Mac OS X
 ---
