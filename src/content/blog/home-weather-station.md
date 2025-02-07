@@ -7,7 +7,7 @@ With the "IoT" market being flooded with products, setting up a weather monitori
 
 ## Weather Board
 
-![Odroid Weather Board](/static/img/blog/weather-board.jpg)
+![Odroid Weather Board](../../assets/blog/weather-board.jpg)
 
 The main piece of sensing hardware for this station is the [Odroid Weather Board](https://www.hardkernel.com/shop/weather-board-2/). It is not only specifically made to work with Odroid devices, which I absolutely love and recommend, but it also has a pair of high quality sensors. The BME280 sensor provides measurements for temperature, barometric pressure and humidity, while the Si1132 sensor provides UV index, ambient light and IR measurements.
 
@@ -93,7 +93,7 @@ There are two required libraries here, one for each sensor, and in any case the 
 
 Now we can open a tmux session, run the script, and then start seeing some data flowing into Grafana! (Can you see the air conditioning PID cycles?)
 
-![Grafana screenshot](/static/img/blog/weather-dash.png)
+![Grafana screenshot](../../assets/blog/weather-dash.png)
 
 # Conclusion
 

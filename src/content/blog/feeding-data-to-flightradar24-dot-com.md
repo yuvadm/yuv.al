@@ -14,7 +14,7 @@ As for the host device, I have two requirements for it: it has to be small enoug
 
 The obvious choice is to to with the trusty [TL-WR703n](http://wiki.openwrt.org/toh/tp-link/tl-wr703n), of which by now I have a handful waiting to be used for various projects at any given time. It is installed with OpenWrt, with the wireless connections set to 'station' mode, and connected to my regular home WLAN.
 
-![](/static/img/blog/1090setup.jpg)
+![](../../assets/blog/1090setup.jpg)
 
 The software running is [dump1090](https://github.com/antirez/dump1090/), which is an extremely lightweight ADS-B decoder for RTL-SDR, it runs flawlessly on the WR703n. If you're running OpenWrt Barrier Breaker (i.e. trunk) you can install `librtlsdr`  and `dump1090` from opkg, and [Steve Markgraf has also compiled .ipks for Attitude Adjustment](https://steve-m.de/projects/rtl-sdr/openwrt/packages/).)
 
@@ -38,7 +38,7 @@ Note that I'm just using the `--net` flag and piping all output to `/dev/null`. 
 
 ## Antenna
 
-![](/static/img/blog/1090ant.jpg)
+![](../../assets/blog/1090ant.jpg)
 
 The antenna I'm currently using is a plain simple quarter-wavelength ground plane antenna, created by sticking a copper wire in the central lead of an N connector, and 4 more wires as ground, on each of the screw holes. From there I have a pigtail cable with an N connector on one side, and an RP-SMA on the other. Another adapter is needed to convert from RP-SMA to MCX on the small dongle.
 

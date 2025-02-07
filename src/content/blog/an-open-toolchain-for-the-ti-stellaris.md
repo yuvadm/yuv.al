@@ -5,7 +5,7 @@ date: '2012-10-29'
 title: An Open Toolchain for the TI Stellaris
 ---
 
-![](/static/img/blog/stellaris.jpg)
+![](../../assets/blog/stellaris.jpg)
 
 [In my last post](/blog/2012/10/07/setting-up-an-arm-eabi-toolchain-on-mac-os-x/) I set up an ARM EABI toolchain to work with my CCC r0ket badge. Incidentally, I just received my [Texas Instruments Stellaris](http://www.ti.com/stellaris) dev board and wanted to start playing around with it. Unfortunately, TI's development tools are highly bloated, proprietary and almost exclusively geared towards Windows environments. Unacceptable. I wasn't about to download a 1.3GB file just to get a LED blinking on a dev board using my Mac.
 

@@ -16,11 +16,11 @@ Our mission was to setup a reliable internet connection for ~120 hackers and mak
 
 Our only choice was to use off-the-shelf equipment and open-source stacks - this wasn't a limitation, the entire team preferred to use an open-source stack so that similar setups could be implemented easily in other venues. This meant using only routers we could find at stores and using everything we had sitting around that we could lay our hands on. This usually meant TP-Link devices which are high quality yet cheap, and have excellent [OpenWrt](http://openwrt.org/) support, which was naturally flashed on all the devices.
 
-![](/static/img/blog/sdotyam.png)
+![](../../assets/blog/sdotyam.png)
 
 The network setup begins at the administrative building where we have 2 ADSL uplinks, each capable of handling no more than 30/3 Mbps, we took two for redundancy and load balancing. The core router was placed right next to the ADSL modems. From there, we pulled up a point-to-point link from the building rooftop to the building where the open space was located, initially we planned to mount the antenna on the building tower, but settled for the balcony corner closest to the first building since we had a good enough line-of-sight there, and it was easier to access. From the PtP antenna we hooked up a beefy switch and connected all our endpoint APs to there, including anyone who wanted to use an ethernet connection. The outdoor area was also covered by the same APs. Finally, the sports hall was poorly covered, since we didn't have another PtP antenna pair, so we had to use a pair of bridged APs, one acting as a station of the outdoor area APs, and the other providing an access point inside the building. This wasn't too bad since no one actually ended up using that space.
 
-![](/static/img/blog/geekcongear.jpg)
+![](../../assets/blog/geekcongear.jpg)
 
 ## Core Router
 

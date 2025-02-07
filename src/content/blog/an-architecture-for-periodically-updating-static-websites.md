@@ -10,7 +10,7 @@ The service that I built, [https://geshem.space](https://geshem.space) (rain, in
 1. Mirror the radar imagery to make sure it's always available
 2. Overlay the images them on a modern and responsive user interface based on a Mapbox's awesome new GL maps
 
-![https://geshem.space](/static/img/blog/geshem.png)
+![https://geshem.space](../../assets/blog/geshem.png)
 
 Initially the service was implemented in Python running on Flask with the UI based on React and deployed on Heroku, and it worked reasonably well. This year I decided to re-implement everything and make it all a bit more stable due to some loose ends that were remaining.
 

@@ -13,7 +13,7 @@ Yesterday, the modem suddenly died. Upon closer inspection it was clear that som
 
 I thanked the seller for his awesome response, but inquired about the nature of the problem. It turns out there's a certain capacitor failure on this device, which apparently is common when used on the Israeli grid, for some reason. Capacitors are a rather easy fix, and I need my connection ASAP. So I decided to fix the device by myself and not burden me or the seller with the entire shipping process.
 
-![](/static/img/blog/hg610.jpg)
+![](../../assets/blog/hg610.jpg)
 
 Opening the unit, it was very clear that an electrolytic capacitor has busted. In the above image (courtesy of Kirill Romaschenko, thanks!) it is C321, the green capacitor located right next to the yellow coil, adjacent to the ethernet bridge.
 

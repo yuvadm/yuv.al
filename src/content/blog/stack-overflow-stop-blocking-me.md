@@ -4,7 +4,7 @@ tags: null
 title: Stack Overflow, stop blocking me
 ---
 
-![](/static/img/blog/stackblock.png)
+![](../../assets/blog/stackblock.png)
 
 Seriously, Stack Overflow, WTF?
 

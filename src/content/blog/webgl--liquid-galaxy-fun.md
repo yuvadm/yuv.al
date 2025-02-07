@@ -7,7 +7,7 @@ title: WebGL / Liquid Galaxy Fun
 The past several weeks have kept me very busy on my latest collaboration with
 new-media artists [Omer and Tal Golan](http://omta.co).
 
-![](/static/img/blog/plantacomment.png)
+![](../../assets/blog/plantacomment.png)
 
 Our project, [PlantAComment.com](http://plantacomment.com) (שיח גלריה, in
 Hebrew) is an interactive installation that encourages visitors to plant
