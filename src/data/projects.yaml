@@ -1,0 +1,392 @@
+projects:
+  - name: top7-foosball
+    year: 2010
+    description: Foosball tournament management system
+    source_code: https://github.com/yuvadm/top7-foosball
+    project_url: null
+    category: project
+
+  - name: mmmine
+    year: 2010
+    description: Product ownership platform experiment
+    source_code: null
+    project_url: mmmine.com
+    category: website
+
+  - name: titlesub
+    year: 2010
+    description: Mass-generated SEO content based on movie screenshots and subtitles
+    source_code: null
+    project_url: titlesub.com
+    category: website
+
+  - name: Data Mining the Israeli Census
+    year: 2010
+    description: Presentation at 28C3 conference
+    source_code: null
+    project_url: https://media.ccc.de/v/28c3-4652-en-data_mining_the_israeli_census/related
+    category: talk
+
+  - name: Fictitious TLV Metro
+    year: 2011
+    description: Fictional Tel Aviv metro system visualization
+    source_code: https://github.com/yuvadm/tlvmetro
+    project_url: https://yuvadm.github.io/tlvmetro/
+    category: project
+
+  - name: pinkyswears
+    year: 2011
+    description: Platform for documenting pinky swears between friends
+    source_code: https://github.com/yuvadm/pinkyswear
+    project_url: null
+    category: project
+
+  - name: polyhash
+    year: 2011
+    description: Experiment in aesthetically visualizing hashed values
+    source_code: https://github.com/yuvadm/polyhash/
+    project_url: null
+    category: project
+
+  - name: lsys.js
+    year: 2011
+    description: Simple L-Systems playground implemented in JavaScript
+    source_code: https://github.com/yuvadm/lsys.js
+    project_url: https://yuvadm.github.io/lsys.js/
+    category: project
+
+  - name: tiva-c
+    year: 2011
+    description: Open source TI Tiva C toolchain
+    source_code: https://github.com/yuvadm/tiva-c
+    project_url: null
+    category: project
+
+  - name: stellaris
+    year: 2011
+    description: Open toolchain for TI Stellaris
+    source_code: https://github.com/yuvadm/stellaris
+    project_url: null
+    category: project
+
+  - name: awsdowntime
+    year: 2011
+    description: Counter measuring AWS uptime during the us-east-1 incident
+    source_code: null
+    project_url: awsdowntime.com
+    category: website
+
+  - name: haaretz newsdiff
+    year: 2013
+    description: Newsdiff implementation for Ha'aretz content
+    source_code: https://github.com/yuvadm/newsdiff
+    project_url: null
+    category: project
+
+  - name: marconi
+    year: 2013
+    description: Vagrant based setup for the GNU Radio stack
+    source_code: https://github.com/yuvadm/marconi
+    project_url: null
+    category: project
+
+  - name: traces5
+    year: 2013
+    description: Website for the 5th Biennale for Drawing in Israel
+    source_code: null
+    project_url: null
+    category: website
+
+  - name: 177147
+    year: 2013
+    description: Web-based game
+    source_code: null
+    project_url: http://yuvadm.github.io/177147/
+    category: project
+
+  - name: gascop
+    year: 2013
+    description: Lightweight POCSAG decoder for RTL-SDR devices
+    source_code: https://github.com/yuvadm/gascop
+    project_url: null
+    category: project
+
+  - name: vanitykeys.io
+    year: 2013
+    description: Cloud-based generation of vanity GPG keys
+    source_code: null
+    project_url: vanitykeys.io
+    category: website
+
+  - name: Jewish Cultures Mapped
+    year: 2013
+    description: Interactive mapping of Jewish cultures
+    source_code: null
+    project_url: https://shual.com/jewish-cultures-mapped/
+    category: website
+
+  - name: amenthes
+    year: 2013
+    description: Hardened Linux desktop for secure EYES ONLY viewing of encrypted files
+    source_code: https://github.com/yuvadm/amenthes
+    project_url: null
+    category: project
+
+  - name: telostats
+    year: 2013
+    description: Visualization of public bike availability in Tel Aviv
+    source_code: https://github.com/idan/telostats
+    project_url: null
+    category: project
+
+  - name: shvil
+    year: 2013
+    description: Municipal data visualization for Transparency International
+    source_code: https://github.com/umbrellaco/shvil
+    project_url: null
+    category: project
+
+  - name: recoverpass
+    year: 2013
+    description: Encrypted file recovery service
+    source_code: null
+    project_url: recoverpass.com
+    category: website
+
+  - name: inphic-S805
+    year: 2013
+    description: Hardware teardown of Inphic S805
+    source_code: https://github.com/yuvadm/inphic-S805
+    project_url: null
+    category: project
+
+  - name: geolocations-il
+    year: 2013
+    description: Scraped geolocations in Israel in GeoJSON format
+    source_code: https://github.com/yuvadm/geolocations-il
+    project_url: null
+    category: project
+
+  - name: rotter news bot
+    year: 2013
+    description: Twitter bot for breaking news from Rotter
+    source_code: null
+    project_url: null
+    category: project
+
+  - name: rockcast
+    year: 2013
+    description: Teardown of Rockcast HDMI casting dongle
+    source_code: https://github.com/yuvadm/rockcast
+    project_url: null
+    category: project
+
+  - name: slingr
+    year: 2013
+    description: CLI for streaming media files over local network to UPnP renderers
+    source_code: https://github.com/yuvadm/slingr
+    project_url: null
+    category: project
+
+  - name: modes.me
+    year: 2016
+    description: Visual coding platform reflecting social media images
+    source_code: https://github.com/yuvadm/modes.me
+    project_url: null
+    category: project
+
+  - name: heroku-periodical
+    year: 2016
+    description: System for deploying periodical tasks on Heroku
+    source_code: https://github.com/yuvadm/heroku-periodical
+    project_url: null
+    category: project
+
+  - name: postmarketos
+    year: 2016
+    description: Initial version of postmarketOS website
+    source_code: null
+    project_url: https://postmarketos.org/
+    category: website
+
+  - name: dg-m1q
+    year: 2016
+    description: Teardown and open source usage for cheap IP camera
+    source_code: https://github.com/yuvadm/dg-m1q
+    project_url: null
+    category: project
+
+  - name: Putting Things on the Internet
+    year: 2017
+    description: Talk at PyCon Israel 2017
+    source_code: null
+    project_url: https://www.youtube.com/watch?v=rMmgzZ_tIe8
+    category: talk
+
+  - name: botim
+    year: 2019
+    description: Project for discovering sockpuppet and bot accounts on Twitter during Israeli elections
+    source_code: https://github.com/botim
+    project_url: null
+    category: project
+
+  - name: ipcli.app
+    year: 2019
+    description: CLI tool for fetching public IP address and whois information
+    source_code: https://github.com/yuvadm/ipcli.app
+    project_url: null
+    category: project
+
+  - name: whatzap.space
+    year: 2019
+    description: Simple app to start WhatsApp chats with new contacts
+    source_code: https://github.com/yuvadm/whatzap
+    project_url: whatzap.space
+    category: website
+
+  - name: qrgen.xyz
+    year: 2019
+    description: Simple QR code generator utility
+    source_code: https://github.com/yuvadm/qrgen.xyz
+    project_url: qrgen.xyz
+    category: website
+
+  - name: weather-station
+    year: 2019
+    description: Home weather monitoring station
+    source_code: null
+    project_url: null
+    category: project
+
+  - name: free-haaretz
+    year: 2019
+    description: Paywall workaround for Haaretz websites
+    source_code: https://github.com/yuvadm/free-haaretz
+    project_url: null
+    category: project
+
+  - name: viewstate
+    year: 2019
+    description: Python library for decoding ASP.NET viewstate
+    source_code: https://github.com/yuvadm/viewstate
+    project_url: null
+    category: project
+
+  - name: geshem.space
+    year: 2019
+    description: Interactive rain radar application
+    source_code: https://github.com/yuvadm/geshem.space
+    project_url: geshem.space
+    category: website
+
+  - name: Pulling Radio Data out of Thin Air
+    year: 2018
+    description: Talk at PyCon Israel 2018
+    source_code: null
+    project_url: https://www.youtube.com/watch?v=xJOFaOM2wUc
+    category: talk
+
+  - name: mastercw
+    year: 2020
+    description: Platform for learning Morse Code quickly
+    source_code: null
+    project_url: mastercw.com
+    category: website
+
+  - name: iss.guru
+    year: 2020
+    description: Modern web interface and API for ISS pass predictions
+    source_code: https://github.com/yuvadm/iss.guru
+    project_url: https://iss.guru/
+    category: website
+
+  - name: heroku-python-skeleton
+    year: 2020
+    description: Skeleton repository for Heroku-deployed Python applications
+    source_code: https://github.com/yuvadm/heroku-python-skeleton
+    project_url: null
+    category: project
+
+  - name: alarmpy
+    year: 2020
+    description: CLI tool for tracking Pikud Ha'oref alarms
+    source_code: https://github.com/yuvadm/alarmpy
+    project_url: null
+    category: project
+
+  - name: fbdowntime
+    year: 2020
+    description: Website tracking downtime of Facebook's data center crash
+    source_code: https://github.com/yuvadm/fbdowntime.com
+    project_url: fbdowntime.com
+    category: website
+
+  - name: greenpass
+    year: 2020
+    description: Signature verification for the Green Pass (התו הירוק)
+    source_code: https://github.com/yuvadm/greenpass
+    project_url: null
+    category: project
+
+  - name: pakarlib
+    year: 2020
+    description: Unified polygon data for Pikud Ha'Oref
+    source_code: https://github.com/yuvadm/pakarlib
+    project_url: null
+    category: project
+
+  - name: ftth-il
+    year: 2020
+    description: Israeli FTTH Plan Technical Details
+    source_code: https://github.com/yuvadm/ftth-il/
+    project_url: null
+    category: project
+
+  - name: eternitybits
+    year: 2020
+    description: Service for eternalizing messages on the Bitcoin blockchain
+    source_code: null
+    project_url: eternitybits.com
+    category: website
+
+  - name: streamlib
+    year: 2020
+    description: Meta-player for streaming favorite live streams from command line
+    source_code: https://github.com/streamlib/streamlib
+    project_url: null
+    category: project
+
+  - name: ymlstash
+    year: 2020
+    description: ORM-like utility for operating on local YAML files via Python dataclasses
+    source_code: https://github.com/yuvadm/ymlstash
+    project_url: null
+    category: project
+
+  - name: namehack.club
+    year: 2020
+    description: Club for geeks that own the domain hack to their name
+    source_code: https://github.com/yuvadm/namehack.club
+    project_url: namehack.club
+    category: website
+
+  - name: crashstrike
+    year: 2020
+    description: Website dedicated to the BSOD apocalypse of CrowdStrike
+    source_code: https://github.com/yuvadm/crashstrike.com
+    project_url: https://crashstrike.com/
+    category: website
+
+  - name: somafm.rs
+    year: 2020
+    description: Rust-based command line player for SomaFM radio
+    source_code: https://github.com/yuvadm/somafm.rs
+    project_url: null
+    category: project
+
+  - name: Decoding the Black Magic of Radio Waves
+    year: 2021
+    description: Talk at BSides TLV
+    source_code: null
+    project_url: https://www.youtube.com/watch?v=WvrBDVZJPMQ
+    category: talk

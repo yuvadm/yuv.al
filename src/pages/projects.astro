@@ -1,0 +1,41 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { projects } from '../data/projects';
+
+const sortedProjects = projects.sort((a, b) => b.year - a.year);
+const categories = [...new Set(projects.map(p => p.category))];
+---
+
+<Layout>
+	<main class="max-w-4xl mx-auto px-6 py-16">
+		<h1 class="text-4xl font-bold mb-12">Projects</h1>
+
+		<div class="space-y-16">
+			{sortedProjects.map((project) => (
+				<div class="border-b border-gray-100 pb-8 last:border-b-0">
+					<div class="flex items-baseline justify-between mb-2">
+						<h2 class="text-xl font-semibold">{project.name}</h2>
+						<span class="text-sm text-gray-500">{project.year}</span>
+					</div>
+					<p class="text-gray-700 mb-4">{project.description}</p>
+					<div class="flex gap-4 text-sm">
+						{project.source_code && (
+							<a href={project.source_code} class="text-blue-600 hover:text-blue-800" target="_blank" rel="noopener">
+								Source Code
+							</a>
+						)}
+						{project.project_url && (
+							<a href={project.project_url.startsWith('http') ? project.project_url : `https://${project.project_url}`} 
+								class="text-blue-600 hover:text-blue-800" target="_blank" rel="noopener">
+								Project Link
+							</a>
+						)}
+						<span class="text-gray-500">
+							{project.category}
+						</span>
+					</div>
+				</div>
+			))}
+		</div>
+	</main>
+</Layout>
