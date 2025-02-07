@@ -1,0 +1,9 @@
+{
+  "id": "stellaris",
+  "name": "stellaris",
+  "year": 2011,
+  "description": "Open toolchain for TI Stellaris",
+  "source_code": "https://github.com/yuvadm/stellaris",
+  "project_url": null,
+  "category": "project"
+}

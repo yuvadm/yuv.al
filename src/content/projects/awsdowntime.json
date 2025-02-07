@@ -1,0 +1,9 @@
+{
+  "id": "awsdowntime",
+  "name": "awsdowntime",
+  "year": 2011,
+  "description": "Counter measuring AWS uptime during the us-east-1 incident",
+  "source_code": null,
+  "project_url": "awsdowntime.com",
+  "category": "website"
+}

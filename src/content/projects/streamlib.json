@@ -1,0 +1,9 @@
+{
+  "id": "streamlib",
+  "name": "streamlib",
+  "year": 2020,
+  "description": "Meta-player for streaming favorite live streams from command line",
+  "source_code": "https://github.com/streamlib/streamlib",
+  "project_url": null,
+  "category": "project"
+}

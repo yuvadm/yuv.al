@@ -1,0 +1,9 @@
+{
+  "id": "slingr",
+  "name": "slingr",
+  "year": 2013,
+  "description": "CLI for streaming media files over local network to UPnP renderers",
+  "source_code": "https://github.com/yuvadm/slingr",
+  "project_url": null,
+  "category": "project"
+}

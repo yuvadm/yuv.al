@@ -1,0 +1,9 @@
+{
+  "id": "haaretz newsdiff",
+  "name": "haaretz newsdiff",
+  "year": 2013,
+  "description": "Newsdiff implementation for Ha'aretz content",
+  "source_code": "https://github.com/yuvadm/newsdiff",
+  "project_url": null,
+  "category": "project"
+}

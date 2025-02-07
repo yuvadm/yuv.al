@@ -1,0 +1,9 @@
+{
+  "id": "botim",
+  "name": "botim",
+  "year": 2019,
+  "description": "Project for discovering sockpuppet and bot accounts on Twitter during Israeli elections",
+  "source_code": "https://github.com/botim",
+  "project_url": null,
+  "category": "project"
+}

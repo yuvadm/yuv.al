@@ -1,0 +1,9 @@
+{
+  "id": "heroku-python-skeleton",
+  "name": "heroku-python-skeleton",
+  "year": 2020,
+  "description": "Skeleton repository for Heroku-deployed Python applications",
+  "source_code": "https://github.com/yuvadm/heroku-python-skeleton",
+  "project_url": null,
+  "category": "project"
+}

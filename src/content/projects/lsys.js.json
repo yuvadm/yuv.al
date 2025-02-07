@@ -1,0 +1,9 @@
+{
+  "id": "lsys.js",
+  "name": "lsys.js",
+  "year": 2011,
+  "description": "Simple L-Systems playground implemented in JavaScript",
+  "source_code": "https://github.com/yuvadm/lsys.js",
+  "project_url": "https://yuvadm.github.io/lsys.js/",
+  "category": "project"
+}

@@ -1,0 +1,9 @@
+{
+  "id": "free-haaretz",
+  "name": "free-haaretz",
+  "year": 2019,
+  "description": "Paywall workaround for Haaretz websites",
+  "source_code": "https://github.com/yuvadm/free-haaretz",
+  "project_url": null,
+  "category": "project"
+}

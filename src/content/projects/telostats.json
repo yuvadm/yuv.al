@@ -1,0 +1,9 @@
+{
+  "id": "telostats",
+  "name": "telostats",
+  "year": 2013,
+  "description": "Visualization of public bike availability in Tel Aviv",
+  "source_code": "https://github.com/idan/telostats",
+  "project_url": null,
+  "category": "project"
+}

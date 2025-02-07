@@ -1,0 +1,9 @@
+{
+  "id": "ipcli.app",
+  "name": "ipcli.app",
+  "year": 2019,
+  "description": "CLI tool for fetching public IP address and whois information",
+  "source_code": "https://github.com/yuvadm/ipcli.app",
+  "project_url": null,
+  "category": "project"
+}

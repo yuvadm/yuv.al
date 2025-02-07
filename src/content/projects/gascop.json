@@ -1,0 +1,9 @@
+{
+  "id": "gascop",
+  "name": "gascop",
+  "year": 2013,
+  "description": "Lightweight POCSAG decoder for RTL-SDR devices",
+  "source_code": "https://github.com/yuvadm/gascop",
+  "project_url": null,
+  "category": "project"
+}
