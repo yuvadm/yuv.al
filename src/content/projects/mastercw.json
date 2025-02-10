@@ -6,5 +6,8 @@
   "source_code": null,
   "project_url": "mastercw.com",
   "category": "website",
-  "tags": []
+  "tags": [
+    "featured"
+  ],
+  "image": "mastercw.png"
 }
