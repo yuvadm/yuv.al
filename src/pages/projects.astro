@@ -18,6 +18,11 @@ const sortedProjects = projects.sort((a, b) => b.data.year - a.data.year);
 							<div class="flex items-baseline justify-between gap-2 mb-1">
 								<h2 class="font-medium text-sm truncate">
 									{project.data.name}
+									{project.data.tags.includes('offline') && (
+										<span class="ml-1 px-1.5 py-0.5 text-[10px] font-medium bg-red-50 text-red-600 rounded">
+											offline
+										</span>
+									)}
 								</h2>
 								<span class="text-xs text-gray-400 shrink-0">
 									{project.data.year}

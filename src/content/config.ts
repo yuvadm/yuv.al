@@ -8,7 +8,8 @@ const projectsSchema = z.object({
   description: z.string(),
   source_code: z.string().url().nullable(),
   project_url: z.string().nullable(),
-  category: z.enum(['project', 'website', 'talk'])
+  category: z.enum(['project', 'website', 'talk']),
+  tags: z.array(z.string())
 });
 
 const blogSchema = z.object({
