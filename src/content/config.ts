@@ -16,6 +16,9 @@ const projectsSchema = z.object({
 const blogSchema = z.object({
   title: z.string(),
   date: z.string(),
+  description: z.string().optional(),
+  draft: z.boolean().optional().default(false),
+  tags: z.array(z.string()).optional().default([]),
 });
 
 const pagesSchema = z.object({
