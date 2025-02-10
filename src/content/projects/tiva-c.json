@@ -5,5 +5,6 @@
   "description": "Open source TI Tiva C toolchain",
   "source_code": "https://github.com/yuvadm/tiva-c",
   "project_url": null,
-  "category": "project"
+  "category": "project",
+  "tags": []
 }

@@ -5,5 +5,6 @@
   "description": "Initial version of postmarketOS website",
   "source_code": null,
   "project_url": "https://postmarketos.org/",
-  "category": "website"
+  "category": "website",
+  "tags": []
 }

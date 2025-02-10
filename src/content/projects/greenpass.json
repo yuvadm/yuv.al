@@ -2,8 +2,9 @@
   "id": "greenpass",
   "name": "greenpass",
   "year": 2020,
-  "description": "Signature verification for the Green Pass (\u05d4\u05ea\u05d5 \u05d4\u05d9\u05e8\u05d5\u05e7)",
+  "description": "Signature verification for the Green Pass (התו הירוק)",
   "source_code": "https://github.com/yuvadm/greenpass",
   "project_url": null,
-  "category": "project"
+  "category": "project",
+  "tags": []
 }

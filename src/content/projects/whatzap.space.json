@@ -5,5 +5,6 @@
   "description": "Simple app to start WhatsApp chats with new contacts",
   "source_code": "https://github.com/yuvadm/whatzap",
   "project_url": "whatzap.space",
-  "category": "website"
+  "category": "website",
+  "tags": []
 }

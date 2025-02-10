@@ -5,5 +5,6 @@
   "description": "Vagrant based setup for the GNU Radio stack",
   "source_code": "https://github.com/yuvadm/marconi",
   "project_url": null,
-  "category": "project"
+  "category": "project",
+  "tags": []
 }

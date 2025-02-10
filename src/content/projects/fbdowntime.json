@@ -5,5 +5,6 @@
   "description": "Website tracking downtime of Facebook's data center crash",
   "source_code": "https://github.com/yuvadm/fbdowntime.com",
   "project_url": "fbdowntime.com",
-  "category": "website"
+  "category": "website",
+  "tags": []
 }

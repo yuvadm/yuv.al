@@ -5,5 +5,6 @@
   "description": "Service for eternalizing messages on the Bitcoin blockchain",
   "source_code": null,
   "project_url": "eternitybits.com",
-  "category": "website"
+  "category": "website",
+  "tags": []
 }

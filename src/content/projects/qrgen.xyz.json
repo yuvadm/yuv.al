@@ -5,5 +5,6 @@
   "description": "Simple QR code generator utility",
   "source_code": "https://github.com/yuvadm/qrgen.xyz",
   "project_url": "qrgen.xyz",
-  "category": "website"
+  "category": "website",
+  "tags": []
 }

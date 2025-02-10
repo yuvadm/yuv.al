@@ -5,5 +5,6 @@
   "description": "Website dedicated to the BSOD apocalypse of CrowdStrike",
   "source_code": "https://github.com/yuvadm/crashstrike.com",
   "project_url": "https://crashstrike.com/",
-  "category": "website"
+  "category": "website",
+  "tags": []
 }

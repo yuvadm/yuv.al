@@ -5,5 +5,6 @@
   "description": "Hardware teardown of Inphic S805",
   "source_code": "https://github.com/yuvadm/inphic-S805",
   "project_url": null,
-  "category": "project"
+  "category": "project",
+  "tags": []
 }
