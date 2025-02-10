@@ -1,1 +1,80 @@
 @import "tailwindcss";
+
+@font-face {
+  font-family: 'Press Start 2P';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+}
+
+:root {
+  --mario-sky: #5C94FC;
+  --mario-ground: #C84C0C;
+  --mario-brick: #E45C10;
+  --mario-question: #FCA044;
+  --mario-text: #FFFFFF;
+  --mario-black: #000000;
+}
+
+body {
+  font-family: 'Press Start 2P', system-ui, -apple-system, sans-serif;
+  background-color: var(--mario-sky);
+  color: var(--mario-text);
+  line-height: 1.6;
+  image-rendering: pixelated;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Press Start 2P', system-ui, -apple-system, sans-serif;
+  color: var(--mario-text);
+  text-shadow: 2px 2px var(--mario-black);
+  margin-bottom: 1rem;
+}
+
+a {
+  color: var(--mario-question);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+a:hover {
+  color: var(--mario-text);
+  text-shadow: 2px 2px var(--mario-black);
+}
+
+.mario-box {
+  background-color: var(--mario-brick);
+  border: 4px solid var(--mario-text);
+  border-style: outset;
+  padding: 1rem;
+  margin: 1rem 0;
+  box-shadow: 4px 4px var(--mario-black);
+}
+
+.mario-button {
+  background-color: var(--mario-question);
+  color: var(--mario-text);
+  border: none;
+  padding: 0.5rem 1rem;
+  font-family: 'Press Start 2P', system-ui, -apple-system, sans-serif;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 4px solid var(--mario-text);
+  border-style: outset;
+}
+
+.mario-button:hover {
+  transform: scale(1.05);
+  box-shadow: 4px 4px var(--mario-black);
+}
+
+article, section {
+  background-color: rgba(0, 0, 0, 0.7);
+  border: 4px solid var(--mario-text);
+  border-style: outset;
+  padding: 2rem;
+  margin: 2rem 0;
+  box-shadow: 4px 4px var(--mario-black);
+}
