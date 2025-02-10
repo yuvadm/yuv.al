@@ -7,6 +7,11 @@ interface Props {
 
 const { project } = Astro.props;
 
+// Import all project images
+const images = await import.meta.glob("/src/assets/projects/*.{jpg,png}", {
+	eager: true,
+});
+
 // Function to get placeholder image based on category
 function getPlaceholderImage(category: string) {
 	switch (category) {
@@ -18,22 +23,28 @@ function getPlaceholderImage(category: string) {
 			return "🛠️";
 	}
 }
+
+// Find the image for the current project
+const projectImage = project.data.image
+	? Object.entries(images).find(([path]) =>
+			path.includes(project.data.image),
+		)?.[1]?.default
+	: null;
 ---
 
 <div
 	class="bg-white rounded border border-gray-100 hover:border-gray-200 transition-colors overflow-hidden"
 >
 	<div
-		class={`h-40 bg-gray-50 flex items-center justify-center text-4xl ${
-			project.data.image ? "" : "border-b border-gray-100"
-		}`}
+		class={`h-40 bg-gray-50 flex items-center justify-center text-4xl ${project.data.image ? "" : "border-b border-gray-100"}`}
 	>
 		{
-			project.data.image ? (
-				<img
-					src={`/assets/projects/${project.data.image}`}
+			projectImage ? (
+				<Image
+					src={projectImage}
 					alt={`Screenshot of ${project.data.name}`}
 					class="w-full h-full object-cover"
+					loading="lazy"
 				/>
 			) : (
 				<span class="text-gray-400">
@@ -54,9 +65,9 @@ function getPlaceholderImage(category: string) {
 					)
 				}
 			</h2>
-			<span class="text-xs text-gray-400 shrink-0"
-				>{project.data.year}</span
-			>
+			<span class="text-xs text-gray-400 shrink-0">
+				{project.data.year}
+			</span>
 		</div>
 		<p class="text-xs text-gray-600 line-clamp-2 mb-2">
 			{project.data.description}
@@ -105,13 +116,7 @@ function getPlaceholderImage(category: string) {
 				)
 			}
 			<span class="text-gray-400 ml-auto">
-				{
-					project.data.category === "project"
-						? "🛠️"
-						: project.data.category === "website"
-							? "🌐"
-							: "🎤"
-				}
+				{getPlaceholderImage(project.data.category)}
 			</span>
 		</div>
 	</div>
