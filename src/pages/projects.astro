@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import { getCollection } from "astro:content";
 
 const projects = await getCollection("projects");
+const sortedProjects = projects.sort((a, b) => b.data.year - a.data.year);
 ---
 
 <Layout>
@@ -11,7 +12,7 @@ const projects = await getCollection("projects");
 
 		<div class="grid grid-cols-3 gap-3">
 			{
-				projects.map((project) => (
+				sortedProjects.map((project) => (
 					<div class="bg-white rounded border border-gray-100 hover:border-gray-200 transition-colors">
 						<div class="p-3">
 							<div class="flex items-baseline justify-between gap-2 mb-1">
