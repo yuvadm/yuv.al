@@ -1,80 +1,171 @@
 @import "tailwindcss";
 
 @font-face {
-  font-family: 'Press Start 2P';
+  font-family: 'Orbitron';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+  src: url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+}
+
+@keyframes scanline {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(100vh);
+  }
+}
+
+@keyframes flicker {
+  0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
+    opacity: 0.99;
+  }
+  20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
+    opacity: 0.4;
+  }
+}
+
+@keyframes textShadow {
+  0% {
+    text-shadow: 0.4389924193300864px 0 1px rgba(0,30,255,0.5), -0.4389924193300864px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+  }
+  5% {
+    text-shadow: 2.7928974010788217px 0 1px rgba(0,30,255,0.5), -2.7928974010788217px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+  }
+  /* ... continues with random values ... */
+  100% {
+    text-shadow: 0.4389924193300864px 0 1px rgba(0,30,255,0.5), -0.4389924193300864px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+  }
 }
 
 :root {
-  --mario-sky: #5C94FC;
-  --mario-ground: #C84C0C;
-  --mario-brick: #E45C10;
-  --mario-question: #FCA044;
-  --mario-text: #FFFFFF;
-  --mario-black: #000000;
+  --cyber-neon: #FF00FF;
+  --cyber-blue: #00FFFF;
+  --cyber-purple: #9D00FF;
+  --cyber-black: #0D0221;
+  --cyber-pink: #FF2A6D;
+  --cyber-yellow: #FFE700;
+  --cyber-green: #05FF00;
 }
 
 body {
-  font-family: 'Press Start 2P', system-ui, -apple-system, sans-serif;
-  background-color: var(--mario-sky);
-  color: var(--mario-text);
+  font-family: 'Orbitron', system-ui, -apple-system, sans-serif;
+  background-color: var(--cyber-black);
+  color: var(--cyber-blue);
   line-height: 1.6;
-  image-rendering: pixelated;
+  position: relative;
+  animation: textShadow 1.6s infinite;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.15),
+    rgba(0, 0, 0, 0.15) 1px,
+    transparent 1px,
+    transparent 2px
+  );
+  pointer-events: none;
+  animation: scanline 10s linear infinite;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Press Start 2P', system-ui, -apple-system, sans-serif;
-  color: var(--mario-text);
-  text-shadow: 2px 2px var(--mario-black);
+  font-family: 'Orbitron', system-ui, -apple-system, sans-serif;
+  color: var(--cyber-neon);
+  text-transform: uppercase;
+  letter-spacing: 2px;
   margin-bottom: 1rem;
+  position: relative;
+  text-shadow: 0 0 10px var(--cyber-neon),
+               0 0 20px var(--cyber-neon),
+               0 0 30px var(--cyber-neon);
 }
 
 a {
-  color: var(--mario-question);
+  color: var(--cyber-pink);
   text-decoration: none;
-  transition: all 0.2s ease;
+  transition: all 0.3s ease;
+  position: relative;
+  text-shadow: 0 0 5px var(--cyber-pink);
 }
 
 a:hover {
-  color: var(--mario-text);
-  text-shadow: 2px 2px var(--mario-black);
+  color: var(--cyber-yellow);
+  text-shadow: 0 0 10px var(--cyber-yellow),
+               0 0 20px var(--cyber-yellow);
 }
 
-.mario-box {
-  background-color: var(--mario-brick);
-  border: 4px solid var(--mario-text);
-  border-style: outset;
+.cyber-box {
+  background-color: rgba(13, 2, 33, 0.7);
+  border: 2px solid var(--cyber-blue);
   padding: 1rem;
   margin: 1rem 0;
-  box-shadow: 4px 4px var(--mario-black);
+  position: relative;
+  box-shadow: 0 0 10px var(--cyber-blue),
+              inset 0 0 10px var(--cyber-blue);
 }
 
-.mario-button {
-  background-color: var(--mario-question);
-  color: var(--mario-text);
-  border: none;
-  padding: 0.5rem 1rem;
-  font-family: 'Press Start 2P', system-ui, -apple-system, sans-serif;
+.cyber-box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, 
+    transparent 0%,
+    rgba(0, 255, 255, 0.1) 45%,
+    rgba(0, 255, 255, 0.2) 50%,
+    rgba(0, 255, 255, 0.1) 55%,
+    transparent 100%
+  );
+  pointer-events: none;
+}
+
+.cyber-button {
+  background-color: transparent;
+  color: var(--cyber-green);
+  border: 2px solid var(--cyber-green);
+  padding: 0.5rem 1.5rem;
+  font-family: 'Orbitron', system-ui, -apple-system, sans-serif;
   text-transform: uppercase;
   cursor: pointer;
-  transition: all 0.2s ease;
-  border: 4px solid var(--mario-text);
-  border-style: outset;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  text-shadow: 0 0 5px var(--cyber-green);
+  box-shadow: 0 0 10px var(--cyber-green),
+              inset 0 0 10px var(--cyber-green);
 }
 
-.mario-button:hover {
-  transform: scale(1.05);
-  box-shadow: 4px 4px var(--mario-black);
+.cyber-button:hover {
+  background-color: var(--cyber-green);
+  color: var(--cyber-black);
+  text-shadow: none;
 }
 
 article, section {
-  background-color: rgba(0, 0, 0, 0.7);
-  border: 4px solid var(--mario-text);
-  border-style: outset;
+  background-color: rgba(13, 2, 33, 0.8);
+  border: 2px solid var(--cyber-purple);
   padding: 2rem;
   margin: 2rem 0;
-  box-shadow: 4px 4px var(--mario-black);
+  position: relative;
+  box-shadow: 0 0 15px var(--cyber-purple),
+              inset 0 0 15px var(--cyber-purple);
+}
+
+code {
+  font-family: 'Share Tech Mono', monospace;
+  background-color: rgba(255, 0, 255, 0.1);
+  color: var(--cyber-yellow);
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+  text-shadow: 0 0 5px var(--cyber-yellow);
 }
