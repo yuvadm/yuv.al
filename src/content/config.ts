@@ -18,6 +18,11 @@ const blogSchema = z.object({
   date: z.string(),
 });
 
+const pagesSchema = z.object({
+  title: z.string(),
+  subtitle: z.string(),
+});
+
 export const collections = {
   'projects': defineCollection({
     loader: glob({ pattern: "**/*.json", base: "./src/content/projects" }),
@@ -26,5 +31,6 @@ export const collections = {
   'blog': defineCollection({
     type: 'content',
     schema: blogSchema,
-  })
+  }),
+  'pages': defineCollection({ schema: pagesSchema }),
 };
