@@ -6,5 +6,7 @@
   "source_code": null,
   "project_url": "vanitykeys.io",
   "category": "website",
-  "tags": []
+  "tags": [
+    "offline"
+  ]
 }

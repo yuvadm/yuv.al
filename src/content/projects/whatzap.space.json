@@ -6,5 +6,7 @@
   "source_code": "https://github.com/yuvadm/whatzap",
   "project_url": "whatzap.space",
   "category": "website",
-  "tags": []
+  "tags": [
+    "offline"
+  ]
 }
