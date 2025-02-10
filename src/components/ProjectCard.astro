@@ -8,9 +8,10 @@ interface Props {
 const { project } = Astro.props;
 
 // Import all project images
-const images = await import.meta.glob("/src/assets/projects/*.{jpg,png}", {
-	eager: true,
-});
+const images: Record<string, { default: ImageMetadata }> =
+	await import.meta.glob("/src/assets/projects/*.{jpg,png}", {
+		eager: true,
+	});
 
 // Function to get placeholder image based on category
 function getPlaceholderImage(category: string) {
