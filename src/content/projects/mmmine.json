@@ -1,10 +1,10 @@
 {
   "id": "mmmine",
-  "name": "mmmine",
+  "name": "mmmine.com",
   "year": 2010,
-  "description": "Product ownership platform experiment",
+  "description": "Personal showcase platform for products",
   "source_code": null,
-  "project_url": "mmmine.com",
+  "project_url": null,
   "category": "website",
   "tags": [
     "offline"

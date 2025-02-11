@@ -1,8 +1,8 @@
 {
   "id": "eternitybits",
-  "name": "eternitybits",
+  "name": "Eternity Bits",
   "year": 2020,
-  "description": "Service for eternalizing messages on the Bitcoin blockchain",
+  "description": "Notarize messages on the Bitcoin blockchain forever",
   "source_code": null,
   "project_url": "eternitybits.com",
   "category": "website",
