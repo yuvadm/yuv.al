@@ -102,12 +102,28 @@ float snoise(vec3 v) {
 
 // --- Colormap Function ---
 vec3 colormap_clean(float t) {
-  t = clamp(t, 0.0, 1.0);
-  vec3 c1=vec3(0.05,0.1,0.3), c2=vec3(0.1,0.3,0.6), c3=vec3(0.2,0.6,0.7), c4=vec3(0.5,0.8,0.8), c5=vec3(0.8,0.7,0.9);
-  if (t < 0.25) return mix(c1, c2, t / 0.25); 
-  else if (t < 0.5) return mix(c2, c3, (t - 0.25) / 0.25);
-  else if (t < 0.75) return mix(c3, c4, (t - 0.5) / 0.25); 
-  else return mix(c4, c5, (t - 0.75) / 0.25);
+  t = clamp(t, 0.0, 1.0); // Ensure t is in [0,1]
+
+  // Palette: ["#ffbe0b","#fb5607","#ff006e","#8338ec","#3a86ff"]
+  vec3 color1 = vec3(1.000, 0.745, 0.043); // #ffbe0b (Yellow)
+  vec3 color2 = vec3(0.984, 0.337, 0.027); // #fb5607 (Orange)
+  vec3 color3 = vec3(1.000, 0.000, 0.431); // #ff006e (Pink/Magenta)
+  vec3 color4 = vec3(0.514, 0.220, 0.925); // #8338ec (Purple)
+  vec3 color5 = vec3(0.227, 0.525, 1.000); // #3a86ff (Blue)
+
+  // We have 5 colors, so 4 segments for interpolation.
+  // Each segment will take up 1.0 / 4.0 = 0.25 of the range.
+  float segment_length = 0.25; //  1.0 / (number of colors - 1)
+
+  if (t < segment_length) { // 0.0 to 0.25
+    return mix(color1, color2, t / segment_length);
+  } else if (t < segment_length * 2.0) { // 0.25 to 0.50
+    return mix(color2, color3, (t - segment_length) / segment_length);
+  } else if (t < segment_length * 3.0) { // 0.50 to 0.75
+    return mix(color3, color4, (t - segment_length * 2.0) / segment_length);
+  } else { // 0.75 to 1.0
+    return mix(color4, color5, (t - segment_length * 3.0) / segment_length);
+  }
 }
 
 void main() {
