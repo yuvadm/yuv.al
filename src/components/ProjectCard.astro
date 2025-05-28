@@ -94,7 +94,7 @@ const projectImage = project.data.image
 				)
 			}
 			{
-				project.data.project_url && (
+				project.data.project_url && !project.data.tags.includes("offline") && (
 					<a
 						href={
 							project.data.project_url.startsWith("http")
