@@ -9,7 +9,7 @@ new-media artists [Omer and Tal Golan](http://omta.co).
 
 ![](../../assets/blog/plantacomment.png)
 
-Our project, [PlantAComment.com](http://plantacomment.com) (שיח גלריה, in
+Our project, PlantAComment.com (שיח גלריה, in
 Hebrew) is an interactive installation that encourages visitors to plant
 thoughts that manifest themselves as trees in a semi-apocalyptic 3D world. The
 installation premiered this week at the [2012 Fresh Paint art fair in Tel Aviv](http://www.freshpaint.co.il/en/). Throughout the week, our project has

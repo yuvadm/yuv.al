@@ -4,8 +4,8 @@ tags: null
 title: Migration to Git - A Review
 ---
 
-It's been almost 4 months since we've [migrated our SVN repository over to
-Git](http://blog.y3xz.com/blog/2011/03/20/why-were-switching-to-git/).
+It's been almost 4 months since we've migrated our SVN repository over to Git.
+
 **TL;DR;? We haven't looked back ever since.**
 
 I can definitely say our workflow has much improved since the migration. We

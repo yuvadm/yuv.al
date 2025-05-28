@@ -6,8 +6,7 @@ title: A modern Python stack for a real-time web application
 
 Earlier today I wrote [a detailed answer on Stack Overflow](http://stackoverflow.com/a/10950702/24545) about a suggested Python
 stack for building a modern real-time web application. This is based upon the
-work I did over the past several months with
-[PlantAComment.com](http://plantacomment.com), [which I've also written about recently](http://blog.y3xz.com/blog/2012/05/20/webgl--liquid-galaxy-fun/).
+work I did over the past several months with PlantAComment.com, [which I've also written about recently](/blog/webgl--liquid-galaxy-fun/).
 
 In any case, I've found this stack to be pretty damn solid. Since we were
 doing real-time WebGL rendering, and synching that data on a multi-client

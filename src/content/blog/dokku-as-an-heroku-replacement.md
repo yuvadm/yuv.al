@@ -9,7 +9,7 @@ For the past year or two, Heroku has been my weapon of choice for quick-and-easy
 
 My gripe with Heroku has always been with larger projects. For someone who's done devops for larger web projects previously, the threshold for when you need to start customizing things is relatively low, and the need to switch your deployment strategy become imminent. However, in this post we won't be talking about larger projects that require their own set of deployment tools.
 
-I'd like to focus on the category of smaller projects. On Heroku you get a single dyno for free, and for many uses (such as [deploying single periodical tasks](http://blog.y3xz.com/blog/2012/11/16/deploying-periodical-tasks-on-heroku/)) this is great. However, even a minuscule side-project might require, at the very least, a single web process adjacent to a single worker process. In Heroku's case, this is $20/month, which might not be worth it for a small project.
+I'd like to focus on the category of smaller projects. On Heroku you get a single dyno for free, and for many uses (such as [deploying single periodical tasks](/blog/deploying-periodical-tasks-on-heroku/)) this is great. However, even a minuscule side-project might require, at the very least, a single web process adjacent to a single worker process. In Heroku's case, this is $20/month, which might not be worth it for a small project.
 
 Meet [Dokku](https://github.com/progrium/dokku).
 

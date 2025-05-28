@@ -15,8 +15,7 @@ tunnel) is an endeavor I would recommend to no one. Riding an open wireless
 network [bareback](http://www.urbandictionary.com/define.php?term=bareback)?
 No way.
 
-So, I use [the amazing sshuttle](http://blog.y3xz.com/blog/2011/05/22/poor-
-mans-vpn/) which is routed to one of my servers on Amazon EC2. But guess what?
+So, I use the amazing sshuttle which is routed to one of my servers on Amazon EC2. But guess what?
 [Stack Exchange blocks all incoming traffic from EC2](http://meta.stackoverflow.com/questions/116109/amazon-web-services-ip-blocks-filtering). Why? Supposedly, to prevent screen-scraping bots.
 
 Now, I'm not intimate with SO/SE's traffic patterns, and I'm sure they are
