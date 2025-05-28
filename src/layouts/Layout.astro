@@ -14,7 +14,12 @@ const { title } = Astro.props;
 		<meta charset="UTF-8" />
 		<meta name="description" content="Yuval Adam's personal website" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+		<!-- Favicon icons -->
+		<link rel="icon" href="/ico/favicon.ico" sizes="any" />
+		<link rel="apple-touch-icon" href="/ico/apple-touch-icon.png" />
+		<link rel="manifest" href="/manifest.json" />
+
 		<meta name="generator" content={Astro.generator} />
 		<title>{title ? `${title} | Yuval Adam` : "Yuval Adam"}</title>
 	</head>
