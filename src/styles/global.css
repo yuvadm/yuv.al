@@ -2,14 +2,42 @@
 
 @plugin "@tailwindcss/typography";
 
+/* Define custom font families */
+@theme {
+  --font-family-sans: Manrope, ui-sans-serif, system-ui, sans-serif;
+  --font-family-serif: Lora, ui-serif, Georgia, serif;
+  --font-family-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
+/* Import fonts */
+@import "@fontsource/manrope/400.css";
+@import "@fontsource/manrope/500.css";
+@import "@fontsource/manrope/600.css";
+@import "@fontsource/manrope/700.css";
+@import "@fontsource/lora/400.css";
+@import "@fontsource/lora/500.css";
+@import "@fontsource/lora/600.css";
+@import "@fontsource/jetbrains-mono/400.css";
+
+/* Typography styles */
+.prose {
+    font-family: Manrope, ui-sans-serif, system-ui, sans-serif;
+}
+
+.prose h1, .prose h2, .prose h3, .prose h4, .prose h5, .prose h6 {
+    font-family: Lora, ui-serif, Georgia, serif;
+}
+
 .prose pre {
     white-space: pre-wrap;
     word-wrap: break-word;
     overflow-wrap: break-word;
     max-width: 100%;
+    font-family: "JetBrains Mono", ui-monospace, monospace;
 }
 
 .prose code {
     white-space: pre-wrap;
     word-break: break-all;
+    font-family: "JetBrains Mono", ui-monospace, monospace;
 }
