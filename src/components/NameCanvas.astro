@@ -44,24 +44,47 @@ class NameCanvas {
         this.setupResponsive();
     }
     
+    drawHexagon(x, y, size) {
+        const angle = Math.PI / 3; // 60 degrees
+        this.ctx.beginPath();
+        
+        for (let i = 0; i < 6; i++) {
+            const xPos = x + size * Math.cos(angle * i);
+            const yPos = y + size * Math.sin(angle * i);
+            
+            if (i === 0) {
+                this.ctx.moveTo(xPos, yPos);
+            } else {
+                this.ctx.lineTo(xPos, yPos);
+            }
+        }
+        
+        this.ctx.closePath();
+    }
+    
     setResponsiveDimensions() {
+        // Get the container's dimensions instead of using fixed sizes
+        const container = this.canvas.parentElement;
+        const containerRect = container.getBoundingClientRect();
+        
+        // Use container width with minimal padding, height based on font size
         const viewportWidth = window.innerWidth;
         
         if (viewportWidth < 480) {
             // Mobile
-            this.width = Math.min(350, viewportWidth - 40);
-            this.height = 70;
-            this.fontSize = 42;
+            this.width = Math.max(280, containerRect.width || 280);
+            this.height = 60;
+            this.fontSize = 38;
         } else if (viewportWidth < 768) {
-            // Tablet
-            this.width = 420;
-            this.height = 85;
-            this.fontSize = 56;
+            // Tablet  
+            this.width = Math.max(350, containerRect.width || 350);
+            this.height = 70;
+            this.fontSize = 48;
         } else {
             // Desktop
-            this.width = 500;
-            this.height = 100;
-            this.fontSize = 64;
+            this.width = Math.max(400, containerRect.width || 400);
+            this.height = 80;
+            this.fontSize = 56;
         }
     }
     
@@ -123,12 +146,18 @@ class NameCanvas {
         tempCtx.imageSmoothingEnabled = true;
         tempCtx.imageSmoothingQuality = 'high';
         
-        // Set font and draw text (responsive)
+        // Set font and draw text (responsive, full width usage)
         tempCtx.font = `bold ${this.fontSize}px Lora, serif`;
         tempCtx.fillStyle = '#000';
-        tempCtx.textAlign = 'center';
+        tempCtx.textAlign = 'left';
         tempCtx.textBaseline = 'middle';
-        tempCtx.fillText('Yuval Adam', this.width / 2, this.height / 2);
+        
+        // Measure text to optimize positioning
+        const textMetrics = tempCtx.measureText('Yuval Adam');
+        const textWidth = textMetrics.width;
+        const xPosition = Math.max(5, (this.width - textWidth) / 2); // Center with minimal margin
+        
+        tempCtx.fillText('Yuval Adam', xPosition, this.height / 2);
         
         // Get image data
         const imageData = tempCtx.getImageData(0, 0, tempCanvas.width, tempCanvas.height);
@@ -136,7 +165,7 @@ class NameCanvas {
         
         // Extract pixels with better sampling
         this.pixels = [];
-        const pixelSize = 3; // Reduced for better detail
+        const pixelSize = 2; // Smaller for better text clarity
         
         for (let y = 0; y < this.height * scale; y += pixelSize * scale) {
             for (let x = 0; x < this.width * scale; x += pixelSize * scale) {
@@ -149,10 +178,12 @@ class NameCanvas {
                         y: y / scale,
                         originalX: x / scale,
                         originalY: y / scale,
-                        size: Math.random() * 1.5 + 2, // Larger, more consistent sizes
-                        speed: Math.random() * 0.02 + 0.01,
+                        size: Math.random() * 0.8 + 1.5, // Smaller, more consistent sizes
+                        speed: Math.random() * 0.01 + 0.005,
                         offset: Math.random() * Math.PI * 2,
-                        color: `hsl(${200 + Math.random() * 40}, 80%, ${40 + Math.random() * 20}%)` // Better contrast
+                        rotation: Math.random() * Math.PI * 2,
+                        rotationSpeed: (Math.random() - 0.5) * 0.005, // Much slower rotation
+                        color: `hsl(${200 + Math.random() * 30}, 70%, ${45 + Math.random() * 15}%)` // More consistent colors
                     });
                 }
             }
@@ -167,35 +198,37 @@ class NameCanvas {
         
         // Draw pixels
         this.pixels.forEach((pixel, index) => {
-            // Animation effects
-            const wave = Math.sin(this.time + pixel.offset) * 1.5;
-            const pulse = Math.sin(this.time * 2 + index * 0.1) * 0.3 + 1;
+            // Very subtle animation effects
+            const wave = Math.sin(this.time + pixel.offset) * 0.5; // Much smaller wave
+            const pulse = Math.sin(this.time * 1.5 + index * 0.15) * 0.1 + 1; // Subtle pulse
             
             if (this.hovering) {
-                // Scatter effect on hover
-                pixel.x += (Math.random() - 0.5) * 2;
-                pixel.y += (Math.random() - 0.5) * 2;
+                // Gentle scatter effect on hover
+                pixel.x += (Math.random() - 0.5) * 1;
+                pixel.y += (Math.random() - 0.5) * 1;
                 
                 // Gradually return to original position
-                pixel.x += (pixel.originalX - pixel.x) * 0.1;
-                pixel.y += (pixel.originalY - pixel.y) * 0.1;
+                pixel.x += (pixel.originalX - pixel.x) * 0.15;
+                pixel.y += (pixel.originalY - pixel.y) * 0.15;
             } else {
-                // Gentle wave animation
+                // Very gentle wave animation
                 pixel.x = pixel.originalX + wave;
-                pixel.y = pixel.originalY + Math.sin(this.time + pixel.offset * 2) * 0.8;
+                pixel.y = pixel.originalY + Math.sin(this.time + pixel.offset * 2) * 0.3;
             }
             
-            // Draw circle with better anti-aliasing
+            // Very subtle rotation update
+            pixel.rotation += pixel.rotationSpeed;
+            
+            // Draw hexagon with better anti-aliasing
             this.ctx.save();
             this.ctx.globalAlpha = 0.9;
-            this.ctx.beginPath();
-            this.ctx.arc(
-                pixel.x, 
-                pixel.y, 
-                pixel.size * pulse, 
-                0, 
-                Math.PI * 2
-            );
+            
+            // Apply rotation
+            this.ctx.translate(pixel.x, pixel.y);
+            this.ctx.rotate(pixel.rotation);
+            
+            // Draw hexagon
+            this.drawHexagon(0, 0, pixel.size * pulse);
             this.ctx.fillStyle = pixel.color;
             this.ctx.fill();
             
@@ -230,17 +263,15 @@ document.addEventListener('DOMContentLoaded', () => {
 <style>
     .name-canvas-container {
         position: relative;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        min-height: 100px;
+        display: inline-block;
+        width: auto;
+        min-width: 280px;
     }
     
     #nameCanvas {
         display: block;
         background: transparent;
-        max-width: 100%;
+        width: 100%;
         height: auto;
     }
     
@@ -275,7 +306,7 @@ document.addEventListener('DOMContentLoaded', () => {
     /* Responsive adjustments */
     @media (max-width: 480px) {
         .name-canvas-container {
-            min-height: 70px;
+            min-width: 280px;
         }
         .fallback-text h1 {
             font-size: 2.5rem;
@@ -284,7 +315,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     @media (max-width: 768px) {
         .name-canvas-container {
-            min-height: 85px;
+            min-width: 300px;
         }
         .fallback-text h1 {
             font-size: 3rem;
