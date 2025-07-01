@@ -20,75 +20,147 @@ function getProjectImage(project: any) {
 			)?.[1]?.default
 		: null;
 }
+
+// Separate projects with and without images
+const projectsWithImages = sortedProjects.filter(project => getProjectImage(project));
+const projectsWithoutImages = sortedProjects.filter(project => !getProjectImage(project));
 ---
 
 <Layout>
-	<main class="max-w-4xl mx-auto px-6 py-16">
-		<div class="space-y-4">
-			{
-				sortedProjects.map((project) => {
-					const projectImage = getProjectImage(project);
-					return (
-						<div class="flex items-start gap-6 p-6 border-b border-gray-100 pb-6">
-							{projectImage && (
-								<div class="w-32 h-24 flex-shrink-0 rounded-lg overflow-hidden">
-									<Image
-										src={projectImage}
-										alt={`Screenshot of ${project.data.name}`}
-										class="w-full h-full object-cover"
-										loading="lazy"
-									/>
+	<main class="max-w-6xl mx-auto px-4 py-8">
+		{/* Projects with Images */}
+		{projectsWithImages.length > 0 && (
+			<div class="mb-8">
+				<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-3">
+					{
+						projectsWithImages.map((project) => {
+							const projectImage = getProjectImage(project);
+							return (
+								<div class="bg-white rounded border border-gray-200 hover:border-gray-300 hover:shadow-sm transition-all overflow-hidden group flex flex-col h-full">
+									<div class="h-24 bg-gray-50 overflow-hidden">
+										<Image
+											src={projectImage!}
+											alt={`Screenshot of ${project.data.name}`}
+											class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-200"
+											loading="lazy"
+										/>
+									</div>
+									<div class="p-2 flex flex-col flex-1">
+										<div class="flex items-start justify-between gap-1 mb-1">
+											<h3 class="font-medium text-xs leading-tight line-clamp-2 flex-1">
+												{project.data.name}
+											</h3>
+											<span class="text-[10px] text-gray-500 shrink-0">
+												{project.data.year}
+											</span>
+										</div>
+										<p class="text-[10px] text-gray-600 line-clamp-2 mb-2 leading-relaxed flex-1">
+											{project.data.description}
+										</p>
+										<div class="flex items-center gap-2 text-[10px] mt-auto">
+											{project.data.source_code && (
+												<a
+													href={project.data.source_code}
+													class="text-blue-600 hover:text-blue-800 font-medium"
+													target="_blank"
+													rel="noopener"
+													title="Source Code"
+												>
+													Code
+												</a>
+											)}
+											{project.data.project_url && !project.data.tags.includes("offline") && (
+												<a
+													href={
+														project.data.project_url.startsWith("http")
+															? project.data.project_url
+															: `https://${project.data.project_url}`
+													}
+													class="text-blue-600 hover:text-blue-800 font-medium"
+													target="_blank"
+													rel="noopener"
+													title="Live Project"
+												>
+													Live
+												</a>
+											)}
+											{project.data.tags.includes("offline") && (
+												<span class="ml-auto px-1 py-0.5 text-[9px] font-medium bg-red-50 text-red-600 rounded">
+													offline
+												</span>
+											)}
+										</div>
+									</div>
 								</div>
-							)}
-							<div class="flex-grow">
-								<div class="flex justify-between items-baseline mb-2">
-									<h3 class="text-xl font-semibold">
+							);
+						})
+					}
+				</div>
+			</div>
+		)}
+		
+		{/* Projects without Images - Ultra Dense */}
+		{projectsWithoutImages.length > 0 && (
+			<div>
+				<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-1.5">
+					{
+						projectsWithoutImages.map((project) => {
+							return (
+								<div class="bg-white rounded border border-gray-200 hover:border-gray-300 hover:bg-gray-50 transition-colors p-2 group flex flex-col h-full">
+									<div class="flex items-center gap-1.5 mb-1">
+										<span class="text-sm">
+											{project.data.category === "website" ? "🌐" : 
+											 project.data.category === "talk" ? "🎤" : "🛠️"}
+										</span>
+										<span class="text-[9px] text-gray-500 font-medium">
+											{project.data.year}
+										</span>
+									</div>
+									<h3 class="font-medium text-[11px] leading-tight line-clamp-2 mb-1">
 										{project.data.name}
 									</h3>
-									<span class="text-base text-gray-500">
-										{project.data.year}
-									</span>
-								</div>
-								<p class="text-base text-gray-700 mb-3">
-									{project.data.description}
-								</p>
-								<div class="flex gap-4 text-sm">
-									{project.data.source_code && (
-										<a
-											href={project.data.source_code}
-											class="text-blue-600 hover:text-blue-800 font-medium"
-											target="_blank"
-											rel="noopener"
-										>
-											Source
-										</a>
-									)}
-									{project.data.project_url &&
-										!project.data.tags.includes(
-											"offline",
-										) && (
+									<p class="text-[9px] text-gray-600 line-clamp-3 mb-2 leading-relaxed flex-1">
+										{project.data.description}
+									</p>
+									<div class="flex items-center gap-1.5 text-[9px] mt-auto">
+										{project.data.source_code && (
+											<a
+												href={project.data.source_code}
+												class="text-blue-600 hover:text-blue-800 font-medium"
+												target="_blank"
+												rel="noopener"
+												title="Source Code"
+											>
+												Code
+											</a>
+										)}
+										{project.data.project_url && !project.data.tags.includes("offline") && (
 											<a
 												href={
-													project.data.project_url.startsWith(
-														"http",
-													)
-														? project.data
-																.project_url
+													project.data.project_url.startsWith("http")
+														? project.data.project_url
 														: `https://${project.data.project_url}`
 												}
 												class="text-blue-600 hover:text-blue-800 font-medium"
 												target="_blank"
 												rel="noopener"
+												title="Live Project"
 											>
-												Website
+												Live
 											</a>
 										)}
+										{project.data.tags.includes("offline") && (
+											<span class="ml-auto px-1 py-0.5 text-[8px] font-medium bg-red-50 text-red-600 rounded">
+												off
+											</span>
+										)}
+									</div>
 								</div>
-							</div>
-						</div>
-					);
-				})
-			}
-		</div>
+							);
+						})
+					}
+				</div>
+			</div>
+		)}
 	</main>
 </Layout>
