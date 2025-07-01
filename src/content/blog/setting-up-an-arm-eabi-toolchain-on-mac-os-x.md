@@ -5,7 +5,7 @@ date: '2012-10-07'
 title: Setting up an ARM EABI toolchain on Mac OS X
 ---
 
-![](http://r0ket.badge.events.ccc.de/_media/wiki:r0ket_space_iii.jpg)
+![](https://r0ket.badge.events.ccc.de/_media/wiki:r0ket_space_iii.jpg)
 
 [29C3](http://events.ccc.de/2012/08/03/call-for-participation-for-29th-chaos-communication-congress/) is coming up, and after completeing and submitting my talk proposals, I've recently started hacking on my [r0ket badge](http://r0ket.badge.events.ccc.de/), which I managed to get my hands on a year ago at 28C3.
 

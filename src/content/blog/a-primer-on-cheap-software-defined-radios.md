@@ -11,7 +11,7 @@ Actually, I've always wanted to buy a frequency scanner and learn more about rad
 
 Up until now, SDR could only be achieved using expensive equipment, and using proprietary drivers and software. The $15 SDR option is a serious breakthrough in making the SDR world more accessible. As with most new technologies, the open-source SDR world is still not very user-friendly, and in this post I'll try to outline the basic stuff a beginner should know when entering this world.
 
-![](http://voltar.org/gnuradio/mixer_diagram.grc.png)
+![](https://voltar.org/gnuradio/mixer_diagram.grc.png)
 
 The basis for SDR is [GNU Radio](http://gnuradio.org/redmine/projects/gnuradio/wiki), which is an open source toolkit that provides all the necessary mathematical building blocks to begin implementing SDR. In essence, GNU Radio is a set of APIs that allow to build usable SDR programs. An important part of GNU Radio is the GNU Radio Companion which is a simple GUI that allows to connect various signal processing components into a single graph and generate code from it. The thing is that, for most basic cases, we don't really want to write the signal processing code ourselves.
 
