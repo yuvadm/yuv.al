@@ -1,7 +1,6 @@
 {
   "id": "daat-hamakom",
   "name": "Jewish Cultures Mapped",
-  "year": 2013,
   "description": "Interactive mapping of Jewish cultures",
   "source_code": null,
   "project_url": "https://shual.com/jewish-cultures-mapped/",
@@ -9,5 +8,7 @@
   "tags": [
     "offline"
   ],
-  "image": "daat.png"
+  "image": "daat.png",
+  "year_started": 2013,
+  "year_ended": 2013
 }

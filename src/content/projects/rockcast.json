@@ -1,11 +1,12 @@
 {
   "id": "rockcast",
   "name": "rockcast",
-  "year": 2013,
   "description": "Teardown of Rockcast HDMI casting dongle",
   "source_code": "https://github.com/yuvadm/rockcast",
   "project_url": null,
   "category": "project",
   "tags": [],
-  "image": "rockcast.jpg"
+  "image": "rockcast.jpg",
+  "year_started": 2018,
+  "year_ended": 2018
 }

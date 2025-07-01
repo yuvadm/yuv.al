@@ -4,7 +4,8 @@ import { glob } from 'astro/loaders';
 const projectsSchema = z.object({
   id: z.string(),
   name: z.string(),
-  year: z.number(),
+  year_started: z.number(),
+  year_ended: z.number(),
   description: z.string(),
   source_code: z.string().url().nullable(),
   project_url: z.string().nullable(),

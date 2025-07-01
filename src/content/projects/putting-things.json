@@ -1,10 +1,11 @@
 {
   "id": "putting-things",
   "name": "Putting Things on the Internet",
-  "year": 2017,
   "description": "Talk at PyCon Israel 2017",
   "source_code": null,
   "project_url": "https://www.youtube.com/watch?v=rMmgzZ_tIe8",
   "category": "talk",
-  "tags": []
+  "tags": [],
+  "year_started": 2017,
+  "year_ended": 2017
 }

@@ -1,12 +1,13 @@
 {
   "id": "vanitykeys.io",
   "name": "vanitykeys.io",
-  "year": 2013,
   "description": "Cloud-based generation of vanity GPG keys",
   "source_code": null,
   "project_url": "vanitykeys.io",
   "category": "website",
   "tags": [
     "offline"
-  ]
+  ],
+  "year_started": 2013,
+  "year_ended": 2013
 }

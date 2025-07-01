@@ -1,10 +1,11 @@
 {
   "id": "ymlstash",
   "name": "ymlstash",
-  "year": 2020,
   "description": "ORM-like utility for operating on local YAML files via Python dataclasses",
   "source_code": "https://github.com/yuvadm/ymlstash",
   "project_url": null,
   "category": "project",
-  "tags": []
+  "tags": [],
+  "year_started": 2024,
+  "year_ended": 2024
 }

@@ -1,13 +1,14 @@
 {
-    "id": "cidr",
-    "name": "cidr.xyz",
-    "year": 2019,
-    "description": "CIDR/IP Address Calculator and Visualizer",
-    "source_code": "https://cidr.xyz",
-    "project_url": null,
-    "category": "project",
-    "tags": [
-        "featured"
-    ],
-    "image": "cidr.png"
+  "id": "cidr",
+  "name": "cidr.xyz",
+  "description": "CIDR/IP Address Calculator and Visualizer",
+  "source_code": "https://cidr.xyz",
+  "project_url": null,
+  "category": "project",
+  "tags": [
+    "featured"
+  ],
+  "image": "cidr.png",
+  "year_started": 2019,
+  "year_ended": 2019
 }

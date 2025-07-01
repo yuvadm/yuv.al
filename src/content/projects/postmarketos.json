@@ -1,10 +1,11 @@
 {
   "id": "postmarketos",
   "name": "postmarketos",
-  "year": 2016,
   "description": "Initial version of postmarketOS website",
   "source_code": null,
   "project_url": "https://postmarketos.org/",
   "category": "website",
-  "tags": []
+  "tags": [],
+  "year_started": 2016,
+  "year_ended": 2016
 }

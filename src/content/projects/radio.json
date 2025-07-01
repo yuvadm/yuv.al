@@ -1,10 +1,11 @@
 {
   "id": "radio",
   "name": "Pulling Radio Data out of Thin Air",
-  "year": 2018,
   "description": "Talk at PyCon Israel 2018",
   "source_code": null,
   "project_url": "https://www.youtube.com/watch?v=xJOFaOM2wUc",
   "category": "talk",
-  "tags": []
+  "tags": [],
+  "year_started": 2018,
+  "year_ended": 2018
 }

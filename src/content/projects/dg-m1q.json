@@ -1,11 +1,12 @@
 {
   "id": "dg-m1q",
   "name": "dg-m1q",
-  "year": 2016,
   "description": "Teardown and open source usage for cheap IP camera",
   "source_code": "https://github.com/yuvadm/dg-m1q",
   "project_url": null,
   "category": "project",
   "tags": [],
-  "image": "dg-m1q.jpg"
+  "image": "dg-m1q.jpg",
+  "year_started": 2017,
+  "year_ended": 2017
 }

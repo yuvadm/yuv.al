@@ -1,12 +1,13 @@
 {
   "id": "awsdowntime",
   "name": "awsdowntime.com",
-  "year": 2011,
   "description": "Counter measuring AWS uptime during the us-east-1 incident",
   "source_code": null,
   "project_url": "awsdowntime.com",
   "category": "website",
   "tags": [
     "offline"
-  ]
+  ],
+  "year_started": 2011,
+  "year_ended": 2011
 }

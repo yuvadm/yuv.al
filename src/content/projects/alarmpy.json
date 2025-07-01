@@ -1,7 +1,6 @@
 {
   "id": "alarmpy",
   "name": "alarmpy",
-  "year": 2020,
   "description": "CLI tool for tracking Pikud Ha'oref alarms",
   "source_code": "https://github.com/yuvadm/alarmpy",
   "project_url": null,
@@ -9,5 +8,7 @@
   "tags": [
     "featured"
   ],
-  "image": "alarmpy.png"
+  "image": "alarmpy.png",
+  "year_started": 2021,
+  "year_ended": 2023
 }

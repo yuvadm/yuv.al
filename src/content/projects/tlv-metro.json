@@ -1,10 +1,11 @@
 {
   "id": "tlv-metro",
   "name": "Fictitious TLV Metro",
-  "year": 2011,
   "description": "Fictional Tel Aviv metro system visualization",
   "source_code": "https://github.com/yuvadm/tlvmetro",
   "project_url": "https://yuvadm.github.io/tlvmetro/",
   "category": "project",
-  "tags": []
+  "tags": [],
+  "year_started": 2012,
+  "year_ended": 2012
 }

@@ -1,12 +1,13 @@
 {
   "id": "pinkyswears",
   "name": "pinkyswea.rs",
-  "year": 2011,
   "description": "Documenting pinky swears between friends",
   "source_code": "https://github.com/yuvadm/pinkyswear",
   "project_url": null,
   "category": "project",
   "tags": [
     "offline"
-  ]
+  ],
+  "year_started": 2012,
+  "year_ended": 2012
 }

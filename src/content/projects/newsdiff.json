@@ -1,12 +1,13 @@
 {
   "id": "newsdiff",
   "name": "Haaretz Newsdiff",
-  "year": 2013,
   "description": "Newsdiff implementation for Ha'aretz content",
   "source_code": "https://github.com/yuvadm/newsdiff",
   "project_url": null,
   "category": "project",
   "tags": [
     "offline"
-  ]
+  ],
+  "year_started": 2013,
+  "year_ended": 2015
 }

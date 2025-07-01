@@ -1,12 +1,13 @@
 {
   "id": "telostats",
   "name": "Tel-O-Stats",
-  "year": 2013,
   "description": "Visualization of public bike availability in Tel Aviv",
   "source_code": "https://github.com/idan/telostats",
   "project_url": null,
   "category": "project",
   "tags": [
     "offline"
-  ]
+  ],
+  "year_started": 2012,
+  "year_ended": 2013
 }

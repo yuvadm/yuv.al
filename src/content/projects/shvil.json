@@ -1,10 +1,11 @@
 {
   "id": "shvil",
   "name": "TI Report",
-  "year": 2013,
   "description": "Municipal data visualization for Transparency International",
   "source_code": "https://github.com/umbrellaco/shvil",
   "project_url": null,
   "category": "project",
-  "tags": []
+  "tags": [],
+  "year_started": 2012,
+  "year_ended": 2014
 }

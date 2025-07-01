@@ -1,12 +1,13 @@
 {
   "id": "eternitybits",
   "name": "Eternity Bits",
-  "year": 2020,
   "description": "Notarize messages on the Bitcoin blockchain forever",
   "source_code": null,
   "project_url": "eternitybits.com",
   "category": "website",
   "tags": [
     "offline"
-  ]
+  ],
+  "year_started": 2020,
+  "year_ended": 2020
 }

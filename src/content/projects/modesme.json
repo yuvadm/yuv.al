@@ -1,7 +1,6 @@
 {
   "id": "modes.me",
   "name": "modes.me",
-  "year": 2016,
   "description": "Visual coding platform reflecting social media images",
   "source_code": "https://github.com/yuvadm/modes.me",
   "project_url": null,
@@ -9,5 +8,7 @@
   "tags": [
     "offline"
   ],
-  "image": "modesme.png"
+  "image": "modesme.png",
+  "year_started": 2015,
+  "year_ended": 2017
 }

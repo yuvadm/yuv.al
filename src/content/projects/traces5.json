@@ -1,7 +1,6 @@
 {
   "id": "traces5",
   "name": "traces5",
-  "year": 2013,
   "description": "Website for the 5th Biennale for Drawing in Israel",
   "source_code": null,
   "project_url": null,
@@ -9,5 +8,7 @@
   "tags": [
     "offline"
   ],
-  "image": "traces5.png"
+  "image": "traces5.png",
+  "year_started": 2013,
+  "year_ended": 2013
 }

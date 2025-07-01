@@ -1,12 +1,13 @@
 {
   "id": "mmmine",
   "name": "mmmine.com",
-  "year": 2010,
   "description": "Personal showcase platform for products",
   "source_code": null,
   "project_url": null,
   "category": "website",
   "tags": [
     "offline"
-  ]
+  ],
+  "year_started": 2010,
+  "year_ended": 2010
 }

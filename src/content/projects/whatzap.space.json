@@ -1,12 +1,13 @@
 {
   "id": "whatzap.space",
   "name": "whatzap.space",
-  "year": 2019,
   "description": "Simple app to start WhatsApp chats with new contacts",
   "source_code": "https://github.com/yuvadm/whatzap",
   "project_url": "whatzap.space",
   "category": "website",
   "tags": [
     "offline"
-  ]
+  ],
+  "year_started": 2017,
+  "year_ended": 2019
 }

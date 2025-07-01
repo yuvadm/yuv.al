@@ -1,10 +1,11 @@
 {
   "id": "inphic-S805",
   "name": "inphic-S805",
-  "year": 2013,
   "description": "Hardware teardown of Inphic S805",
   "source_code": "https://github.com/yuvadm/inphic-S805",
   "project_url": null,
   "category": "project",
-  "tags": []
+  "tags": [],
+  "year_started": 2015,
+  "year_ended": 2015
 }

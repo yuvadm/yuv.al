@@ -1,7 +1,6 @@
 {
   "id": "mastercw",
   "name": "Master CW",
-  "year": 2020,
   "description": "Learn morse code the fast way",
   "source_code": null,
   "project_url": "mastercw.com",
@@ -9,5 +8,7 @@
   "tags": [
     "featured"
   ],
-  "image": "mastercw.png"
+  "image": "mastercw.png",
+  "year_started": 2020,
+  "year_ended": 2020
 }

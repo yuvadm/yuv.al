@@ -1,12 +1,13 @@
 {
   "id": "recoverpass",
   "name": "recoverpass",
-  "year": 2013,
   "description": "Encrypted file recovery service",
   "source_code": null,
   "project_url": "recoverpass.com",
   "category": "website",
   "tags": [
     "offline"
-  ]
+  ],
+  "year_started": 2013,
+  "year_ended": 2013
 }

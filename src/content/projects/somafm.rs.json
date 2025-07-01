@@ -1,10 +1,11 @@
 {
   "id": "somafm.rs",
   "name": "somafm.rs",
-  "year": 2020,
   "description": "Rust-based command line player for SomaFM radio",
   "source_code": "https://github.com/yuvadm/somafm.rs",
   "project_url": null,
   "category": "project",
-  "tags": []
+  "tags": [],
+  "year_started": 2024,
+  "year_ended": 2024
 }

@@ -1,12 +1,13 @@
 {
   "id": "fbdowntime",
   "name": "fbdowntime.com",
-  "year": 2020,
   "description": "Website tracking downtime of Facebook's data center crash",
   "source_code": "https://github.com/yuvadm/fbdowntime.com",
   "project_url": null,
   "category": "website",
   "tags": [
     "offline"
-  ]
+  ],
+  "year_started": 2021,
+  "year_ended": 2021
 }
