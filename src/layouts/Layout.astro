@@ -4,16 +4,21 @@ import Header from "../components/Header.astro";
 
 interface Props {
 	title?: string;
+	description?: string;
 }
 
-const { title } = Astro.props;
+const { title, description } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Yuval Adam's personal website" />
+		<meta
+			name="description"
+			content={description ||
+				"Hello. I'm Yuval. I turn abstract ideas into sequences of 1's and 0's."}
+		/>
 		<meta name="viewport" content="width=device-width" />
 
 		<link rel="icon" href="/ico/favicon.ico" sizes="any" />
