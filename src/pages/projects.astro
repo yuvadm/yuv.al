@@ -4,11 +4,13 @@ import { getCollection } from "astro:content";
 import { Image } from "astro:assets";
 
 const projects = await getCollection("projects");
-const sortedProjects = projects.sort((a, b) => b.data.year_ended - a.data.year_ended);
+const sortedProjects = projects.sort(
+	(a, b) => b.data.year_ended - a.data.year_ended,
+);
 
 // Import all project images
 const images: Record<string, { default: ImageMetadata }> =
-	await import.meta.glob("/src/assets/projects/*.{jpg,png}", {
+	await import.meta.glob("/src/assets/projects/*.{jpg,png,webp}", {
 		eager: true,
 	});
 
@@ -22,18 +24,22 @@ function getProjectImage(project: any) {
 }
 
 // Separate projects with and without images
-const projectsWithImages = sortedProjects.filter(project => getProjectImage(project));
-const projectsWithoutImages = sortedProjects.filter(project => !getProjectImage(project));
+const projectsWithImages = sortedProjects.filter((project) =>
+	getProjectImage(project),
+);
+const projectsWithoutImages = sortedProjects.filter(
+	(project) => !getProjectImage(project),
+);
 ---
 
 <Layout>
 	<main class="max-w-6xl mx-auto px-4 py-8">
 		{/* Projects with Images */}
-		{projectsWithImages.length > 0 && (
-			<div class="mb-8">
-				<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-3">
-					{
-						projectsWithImages.map((project) => {
+		{
+			projectsWithImages.length > 0 && (
+				<div class="mb-8">
+					<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-3">
+						{projectsWithImages.map((project) => {
 							const projectImage = getProjectImage(project);
 							return (
 								<div class="bg-white rounded border border-gray-200 hover:border-brand-primary/30 hover:shadow-sm hover:bg-brand-secondary/10 transition-all overflow-hidden group flex flex-col h-full">
@@ -60,7 +66,9 @@ const projectsWithoutImages = sortedProjects.filter(project => !getProjectImage(
 										<div class="flex items-center gap-2 text-[10px] mt-auto">
 											{project.data.source_code && (
 												<a
-													href={project.data.source_code}
+													href={
+														project.data.source_code
+													}
 													class="text-brand-primary hover:text-brand-primary/80 font-medium"
 													target="_blank"
 													rel="noopener"
@@ -69,22 +77,30 @@ const projectsWithoutImages = sortedProjects.filter(project => !getProjectImage(
 													Code
 												</a>
 											)}
-											{project.data.project_url && !project.data.tags.includes("offline") && (
-												<a
-													href={
-														project.data.project_url.startsWith("http")
-															? project.data.project_url
-															: `https://${project.data.project_url}`
-													}
-													class="text-brand-primary hover:text-brand-primary/80 font-medium"
-													target="_blank"
-													rel="noopener"
-													title="Live Project"
-												>
-													Live
-												</a>
-											)}
-											{project.data.tags.includes("offline") && (
+											{project.data.project_url &&
+												!project.data.tags.includes(
+													"offline",
+												) && (
+													<a
+														href={
+															project.data.project_url.startsWith(
+																"http",
+															)
+																? project.data
+																		.project_url
+																: `https://${project.data.project_url}`
+														}
+														class="text-brand-primary hover:text-brand-primary/80 font-medium"
+														target="_blank"
+														rel="noopener"
+														title="Live Project"
+													>
+														Live
+													</a>
+												)}
+											{project.data.tags.includes(
+												"offline",
+											) && (
 												<span class="ml-auto px-1 py-0.5 text-[9px] font-medium bg-red-50 text-red-600 rounded">
 													offline
 												</span>
@@ -93,24 +109,28 @@ const projectsWithoutImages = sortedProjects.filter(project => !getProjectImage(
 									</div>
 								</div>
 							);
-						})
-					}
+						})}
+					</div>
 				</div>
-			</div>
-		)}
-		
+			)
+		}
+
 		{/* Projects without Images - Ultra Dense */}
-		{projectsWithoutImages.length > 0 && (
-			<div>
-				<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-1.5">
-					{
-						projectsWithoutImages.map((project) => {
+		{
+			projectsWithoutImages.length > 0 && (
+				<div>
+					<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-1.5">
+						{projectsWithoutImages.map((project) => {
 							return (
 								<div class="bg-white rounded border border-gray-200 hover:border-brand-primary/30 hover:bg-brand-secondary/10 transition-colors p-2 group flex flex-col h-full">
 									<div class="flex items-center gap-1.5 mb-1">
 										<span class="text-sm">
-											{project.data.category === "website" ? "🌐" : 
-											 project.data.category === "talk" ? "🎤" : "🛠️"}
+											{project.data.category === "website"
+												? "🌐"
+												: project.data.category ===
+													  "talk"
+													? "🎤"
+													: "🛠️"}
 										</span>
 										<span class="text-[9px] text-gray-500 font-medium">
 											{project.data.year_ended}
@@ -134,22 +154,30 @@ const projectsWithoutImages = sortedProjects.filter(project => !getProjectImage(
 												Code
 											</a>
 										)}
-										{project.data.project_url && !project.data.tags.includes("offline") && (
-											<a
-												href={
-													project.data.project_url.startsWith("http")
-														? project.data.project_url
-														: `https://${project.data.project_url}`
-												}
-												class="text-brand-primary hover:text-brand-primary/80 font-medium"
-												target="_blank"
-												rel="noopener"
-												title="Live Project"
-											>
-												Live
-											</a>
-										)}
-										{project.data.tags.includes("offline") && (
+										{project.data.project_url &&
+											!project.data.tags.includes(
+												"offline",
+											) && (
+												<a
+													href={
+														project.data.project_url.startsWith(
+															"http",
+														)
+															? project.data
+																	.project_url
+															: `https://${project.data.project_url}`
+													}
+													class="text-brand-primary hover:text-brand-primary/80 font-medium"
+													target="_blank"
+													rel="noopener"
+													title="Live Project"
+												>
+													Live
+												</a>
+											)}
+										{project.data.tags.includes(
+											"offline",
+										) && (
 											<span class="ml-auto px-1 py-0.5 text-[8px] font-medium bg-red-50 text-red-600 rounded">
 												off
 											</span>
@@ -157,10 +185,10 @@ const projectsWithoutImages = sortedProjects.filter(project => !getProjectImage(
 									</div>
 								</div>
 							);
-						})
-					}
+						})}
+					</div>
 				</div>
-			</div>
-		)}
+			)
+		}
 	</main>
 </Layout>
