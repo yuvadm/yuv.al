@@ -9,20 +9,20 @@ const navItems = [
 	{
 		href: "/blog",
 		label: "Blog",
-		activeColor: "text-purple-600",
-		hoverColor: "hover:text-purple-600"
+		activeColor: "text-brand-primary",
+		hoverColor: "hover:text-brand-primary"
 	},
 	{
 		href: "/projects", 
 		label: "Projects",
-		activeColor: "text-blue-600",
-		hoverColor: "hover:text-blue-600"
+		activeColor: "text-brand-primary",
+		hoverColor: "hover:text-brand-primary"
 	},
 	{
 		href: "/now",
 		label: "Now",
-		activeColor: "text-green-600",
-		hoverColor: "hover:text-green-600"
+		activeColor: "text-brand-primary",
+		hoverColor: "hover:text-brand-primary"
 	}
 ];
 
@@ -31,12 +31,12 @@ function isActiveSection(itemHref: string, currentPath: string): boolean {
 }
 ---
 
-<nav class="max-w-4xl mx-auto px-6 py-12">
-	<ul class="flex gap-8 items-center">
+<nav class="max-w-4xl mx-auto px-6 py-12 border-b border-brand-secondary/20">
+	<ul class="flex gap-8 items-baseline">
 		<li>
 			<a
 				href="/"
-				class="text-2xl font-black text-gray-800 hover:text-black transition-colors"
+				class="text-2xl font-black text-brand-primary hover:text-gray-800 transition-colors"
 			>
 				Yuval Adam
 			</a>
@@ -45,7 +45,7 @@ function isActiveSection(itemHref: string, currentPath: string): boolean {
 			<li>
 				<a
 					href={item.href}
-					class="text-lg font-semibold hover:scale-105 transition-all duration-200"
+					class="text-lg font-semibold transition-colors duration-200"
 					class:list={[
 						isActiveSection(item.href, currentPath) 
 							? item.activeColor 

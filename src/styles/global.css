@@ -2,6 +2,11 @@
 
 @plugin "@tailwindcss/typography";
 
+@theme {
+  --color-brand-primary: #3f51b5;
+  --color-brand-secondary: #b1dbf0;
+}
+
 .prose pre {
     white-space: pre-wrap;
     word-wrap: break-word;

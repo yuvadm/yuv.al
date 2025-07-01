@@ -36,7 +36,7 @@ const projectsWithoutImages = sortedProjects.filter(project => !getProjectImage(
 						projectsWithImages.map((project) => {
 							const projectImage = getProjectImage(project);
 							return (
-								<div class="bg-white rounded border border-gray-200 hover:border-gray-300 hover:shadow-sm transition-all overflow-hidden group flex flex-col h-full">
+								<div class="bg-white rounded border border-gray-200 hover:border-brand-primary/30 hover:shadow-sm hover:bg-brand-secondary/10 transition-all overflow-hidden group flex flex-col h-full">
 									<div class="h-24 bg-gray-50 overflow-hidden">
 										<Image
 											src={projectImage!}
@@ -61,7 +61,7 @@ const projectsWithoutImages = sortedProjects.filter(project => !getProjectImage(
 											{project.data.source_code && (
 												<a
 													href={project.data.source_code}
-													class="text-blue-600 hover:text-blue-800 font-medium"
+													class="text-brand-primary hover:text-brand-primary/80 font-medium"
 													target="_blank"
 													rel="noopener"
 													title="Source Code"
@@ -76,7 +76,7 @@ const projectsWithoutImages = sortedProjects.filter(project => !getProjectImage(
 															? project.data.project_url
 															: `https://${project.data.project_url}`
 													}
-													class="text-blue-600 hover:text-blue-800 font-medium"
+													class="text-brand-primary hover:text-brand-primary/80 font-medium"
 													target="_blank"
 													rel="noopener"
 													title="Live Project"
@@ -106,7 +106,7 @@ const projectsWithoutImages = sortedProjects.filter(project => !getProjectImage(
 					{
 						projectsWithoutImages.map((project) => {
 							return (
-								<div class="bg-white rounded border border-gray-200 hover:border-gray-300 hover:bg-gray-50 transition-colors p-2 group flex flex-col h-full">
+								<div class="bg-white rounded border border-gray-200 hover:border-brand-primary/30 hover:bg-brand-secondary/10 transition-colors p-2 group flex flex-col h-full">
 									<div class="flex items-center gap-1.5 mb-1">
 										<span class="text-sm">
 											{project.data.category === "website" ? "🌐" : 
@@ -126,7 +126,7 @@ const projectsWithoutImages = sortedProjects.filter(project => !getProjectImage(
 										{project.data.source_code && (
 											<a
 												href={project.data.source_code}
-												class="text-blue-600 hover:text-blue-800 font-medium"
+												class="text-brand-primary hover:text-brand-primary/80 font-medium"
 												target="_blank"
 												rel="noopener"
 												title="Source Code"
@@ -141,7 +141,7 @@ const projectsWithoutImages = sortedProjects.filter(project => !getProjectImage(
 														? project.data.project_url
 														: `https://${project.data.project_url}`
 												}
-												class="text-blue-600 hover:text-blue-800 font-medium"
+												class="text-brand-primary hover:text-brand-primary/80 font-medium"
 												target="_blank"
 												rel="noopener"
 												title="Live Project"
