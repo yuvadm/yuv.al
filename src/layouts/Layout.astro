@@ -20,8 +20,12 @@ const { title } = Astro.props;
 		<link rel="apple-touch-icon" href="/ico/apple-touch-icon.png" />
 		<link rel="manifest" href="/manifest.json" />
 
-		<meta name="generator" content={Astro.generator} />
+		<link rel="canonical" href={new URL(Astro.url.pathname, Astro.site)} />
 		<title>{title ? `${title} | Yuval Adam` : "Yuval Adam"}</title>
+		<script
+			src="https://cdn.usefathom.com/script.js"
+			data-site="ZEJBLICB"
+			defer></script>
 	</head>
 	<body class="bg-gradient-to-br from-white to-brand-secondary/5">
 		<Header currentPath={Astro.url.pathname} />

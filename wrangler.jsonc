@@ -3,5 +3,15 @@
     "compatibility_date": "2025-05-28",
     "assets": {
         "directory": "./dist"
-    }
+    },
+    "routes": [
+        {
+            "pattern": "yuv.al",
+            "custom_domain": true
+        },
+        {
+            "pattern": "www.yuv.al",
+            "custom_domain": true
+        }
+    ]
 }
