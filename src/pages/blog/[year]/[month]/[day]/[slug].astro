@@ -1,0 +1,27 @@
+---
+import { getCollection } from "astro:content";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blog");
+  
+  return posts.map((post) => {
+    const date = new Date(post.data.date);
+    const year = date.getFullYear().toString();
+    const month = (date.getMonth() + 1).toString().padStart(2, '0');
+    const day = date.getDate().toString().padStart(2, '0');
+    
+    return {
+      params: {
+        year,
+        month,
+        day,
+        slug: post.slug,
+      },
+      props: { post },
+    };
+  });
+}
+
+// Redirect to the new URL format
+return Astro.redirect(`/blog/${Astro.params.slug}/`, 301);
+---
