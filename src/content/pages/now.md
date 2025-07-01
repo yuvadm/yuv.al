@@ -3,28 +3,22 @@ title: Now
 subtitle: What I'm doing now
 ---
 
-What I'm focused on right now (updated regularly).
+## Homepage Refresh
 
-## Work
+Pushing a new update to this homepage based on Astro.js. Moving from the previous DIY Pythonic setup to a more modern stack. The new architecture provides better performance, cleaner code organization, and improved developer experience.
 
-Currently working on exciting projects in software development, focusing on building scalable applications and exploring new technologies.
+## Namekit
 
-Today I'm working on the new version of yuv.al, using Astro 5 and TailwindCSS 4.
+Working on [Namekit](https://namekit.appp) as my main product - an AI-based domain name search engine, with availability checking and brand name generation. It's designed to help entrepreneurs, marketers, and developers find the perfect domain names for their projects.
 
-## Learning
+## Agentic Coding Experiments
 
-Diving deep into modern web frameworks and cloud architecture. Always curious about the latest developments in the tech world.
+Diving deep into experimentations with agentic coding and AI-assisted development. Exploring how AI agents can augment the development workflow, from code generation to testing and deployment. Currently testing various approaches to human-AI collaboration in software engineering.
 
-## Side Projects
+## Life with Two Small Kids
 
-Building some interesting open source tools and experimenting with new ideas. Check out my projects page for more details.
-
-I'm also working on a new project - Namekit.
-
-## Life
-
-Enjoying the balance between coding, reading, and exploring new places. Always up for good conversations about technology and life.
+Navigating the beautiful chaos of life with two small children. Learning to balance focused development work with family time, optimizing for both code quality and dad duties. Finding that parenting has surprisingly improved my project management skills and ability to work efficiently in short bursts.
 
 ---
 
-This is a [now page](https://nownownow.com/about), inspired by Derek Sivers. Last updated regularly.
+*This is a [now page](https://nownownow.com/about), inspired by Derek Sivers.*
