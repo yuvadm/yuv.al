@@ -7,23 +7,23 @@ const { currentPath } = Astro.props;
 
 const navItems = [
 	{
-		href: "/blog",
+		href: "/blog/",
 		label: "Blog",
 		activeColor: "text-brand-primary",
-		hoverColor: "hover:text-brand-primary"
+		hoverColor: "hover:text-brand-primary",
 	},
 	{
-		href: "/projects", 
+		href: "/projects/",
 		label: "Projects",
 		activeColor: "text-brand-primary",
-		hoverColor: "hover:text-brand-primary"
+		hoverColor: "hover:text-brand-primary",
 	},
 	{
-		href: "/now",
+		href: "/now/",
 		label: "Now",
 		activeColor: "text-brand-primary",
-		hoverColor: "hover:text-brand-primary"
-	}
+		hoverColor: "hover:text-brand-primary",
+	},
 ];
 
 function isActiveSection(itemHref: string, currentPath: string): boolean {
@@ -41,20 +41,22 @@ function isActiveSection(itemHref: string, currentPath: string): boolean {
 				Yuval Adam
 			</a>
 		</li>
-		{navItems.map((item) => (
-			<li>
-				<a
-					href={item.href}
-					class="text-lg font-semibold transition-colors duration-200"
-					class:list={[
-						isActiveSection(item.href, currentPath) 
-							? item.activeColor 
-							: `text-gray-600 ${item.hoverColor}`
-					]}
-				>
-					{item.label}
-				</a>
-			</li>
-		))}
+		{
+			navItems.map((item) => (
+				<li>
+					<a
+						href={item.href}
+						class="text-lg font-semibold transition-colors duration-200"
+						class:list={[
+							isActiveSection(item.href, currentPath)
+								? item.activeColor
+								: `text-gray-600 ${item.hoverColor}`,
+						]}
+					>
+						{item.label}
+					</a>
+				</li>
+			))
+		}
 	</ul>
 </nav>
