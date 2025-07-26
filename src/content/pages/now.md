@@ -9,7 +9,7 @@ Pushing a new update to this homepage based on Astro.js. Moving from the previou
 
 ## Namekit
 
-Working on [Namekit](https://namekit.appp) as my main product - an AI-based domain name search engine, with availability checking and brand name generation. It's designed to help entrepreneurs, marketers, and developers find the perfect domain names for their projects.
+Working on [Namekit](https://namekit.app) as my main product - an AI-based domain name search engine, with availability checking and brand name generation. It's designed to help entrepreneurs, marketers, and developers find the perfect domain names for their projects.
 
 ## Agentic Coding Experiments
 
