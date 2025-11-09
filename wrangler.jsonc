@@ -12,14 +12,6 @@
         {
             "pattern": "www.yuv.al",
             "custom_domain": true
-        },
-        {
-            "pattern": "yuv.ee",
-            "custom_domain": true
-        },
-        {
-            "pattern": "www.yuv.ee",
-            "custom_domain": true
         }
     ]
 }
