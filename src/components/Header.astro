@@ -31,32 +31,27 @@ function isActiveSection(itemHref: string, currentPath: string): boolean {
 }
 ---
 
-<nav class="max-w-4xl mx-auto px-6 py-12">
-	<ul class="flex gap-8 items-baseline">
-		<li>
-			<a
-				href="/"
-				class="text-2xl font-black text-brand-primary hover:text-gray-800 transition-colors"
-			>
-				Yuval Adam
-			</a>
-		</li>
-		{
-			navItems.map((item) => (
-				<li>
-					<a
-						href={item.href}
-						class="text-lg font-semibold transition-colors duration-200"
-						class:list={[
-							isActiveSection(item.href, currentPath)
-								? item.activeColor
-								: `text-gray-600 ${item.hoverColor}`,
-						]}
-					>
-						{item.label}
-					</a>
-				</li>
-			))
-		}
-	</ul>
+<nav class="max-w-2xl mx-auto px-6 py-8">
+	<div class="flex items-baseline justify-between">
+		<a
+			href="/"
+			class="text-xl text-brand-primary hover:text-gray-800 transition-colors"
+		>
+			Yuval Adam
+		</a>
+		<ul class="flex gap-6 items-baseline">
+			{
+				navItems.map((item) => (
+					<li>
+						<a
+							href={item.href}
+							class="text-xl text-brand-primary hover:text-brand-primary/70 transition-colors duration-200"
+						>
+							{item.label}
+						</a>
+					</li>
+				))
+			}
+		</ul>
+	</div>
 </nav>
