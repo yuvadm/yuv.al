@@ -23,172 +23,69 @@ function getProjectImage(project: any) {
 		: null;
 }
 
-// Separate projects with and without images
-const projectsWithImages = sortedProjects.filter((project) =>
-	getProjectImage(project),
-);
-const projectsWithoutImages = sortedProjects.filter(
-	(project) => !getProjectImage(project),
-);
+function getMainLink(project: any): string | null {
+	const isOffline = project.data.tags.includes("offline");
+	if (project.data.project_url && !isOffline) {
+		return project.data.project_url.startsWith("http")
+			? project.data.project_url
+			: `https://${project.data.project_url}`;
+	}
+	return project.data.source_code || null;
+}
 ---
 
 <Layout title="Projects" description="Open source projects, web applications, and software tools developed by Yuval Adam. Explore code repositories, live demos, and technical implementations across various technologies.">
-	<main class="max-w-4xl mx-auto px-6 py-8">
-		{/* Projects with Images */}
-		{
-			projectsWithImages.length > 0 && (
-				<div class="mb-8">
-					<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-3">
-						{projectsWithImages.map((project) => {
-							const projectImage = getProjectImage(project);
-							return (
-								<div class="bg-white rounded border border-gray-200 hover:border-brand-primary/30 hover:shadow-sm hover:bg-brand-secondary/10 transition-all overflow-hidden group flex flex-col h-full">
-									<div class="h-24 bg-gray-50 overflow-hidden">
-										<Image
-											src={projectImage!}
-											alt={`Screenshot of ${project.data.name}`}
-											class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-200"
-											loading="lazy"
-										/>
-									</div>
-									<div class="p-2 flex flex-col flex-1">
-										<div class="flex items-start justify-between gap-1 mb-1">
-											<h3 class="font-medium text-xs leading-tight line-clamp-2 flex-1">
-												{project.data.name}
-											</h3>
-											<span class="text-[10px] text-gray-500 shrink-0">
-												{project.data.year_ended}
-											</span>
-										</div>
-										<p class="text-[10px] text-gray-600 line-clamp-2 mb-2 leading-relaxed flex-1">
-											{project.data.description}
-										</p>
-										<div class="flex items-center gap-2 text-[10px] mt-auto">
-											{project.data.source_code && (
-												<a
-													href={
-														project.data.source_code
-													}
-													class="text-brand-primary hover:text-brand-primary/80 font-medium"
-													target="_blank"
-													rel="noopener"
-													title="Source Code"
-												>
-													Code
-												</a>
-											)}
-											{project.data.project_url &&
-												!project.data.tags.includes(
-													"offline",
-												) && (
-													<a
-														href={
-															project.data.project_url.startsWith(
-																"http",
-															)
-																? project.data
-																		.project_url
-																: `https://${project.data.project_url}`
-														}
-														class="text-brand-primary hover:text-brand-primary/80 font-medium"
-														target="_blank"
-														rel="noopener"
-														title="Live Project"
-													>
-														Live
-													</a>
-												)}
-											{project.data.tags.includes(
-												"offline",
-											) && (
-												<span class="ml-auto px-1 py-0.5 text-[9px] font-medium bg-red-50 text-red-600 rounded">
-													offline
-												</span>
-											)}
-										</div>
-									</div>
-								</div>
-							);
-						})}
-					</div>
-				</div>
-			)
-		}
+	<main class="max-w-2xl mx-auto px-6 py-8">
+		<div class="space-y-2">
+			{
+				sortedProjects.map((project) => {
+					const projectImage = getProjectImage(project);
+					const mainLink = getMainLink(project);
+					const isOffline = project.data.tags.includes("offline");
+					const Tag = mainLink ? "a" : "div";
 
-		{/* Projects without Images - Ultra Dense */}
-		{
-			projectsWithoutImages.length > 0 && (
-				<div>
-					<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-1.5">
-						{projectsWithoutImages.map((project) => {
-							return (
-								<div class="bg-white rounded border border-gray-200 hover:border-brand-primary/30 hover:bg-brand-secondary/10 transition-colors p-2 group flex flex-col h-full">
-									<div class="flex items-center gap-1.5 mb-1">
-										<span class="text-sm">
-											{project.data.category === "website"
-												? "🌐"
-												: project.data.category ===
-													  "talk"
-													? "🎤"
-													: "🛠️"}
-										</span>
-										<span class="text-[9px] text-gray-500 font-medium">
-											{project.data.year_ended}
-										</span>
-									</div>
-									<h3 class="font-medium text-[11px] leading-tight line-clamp-2 mb-1">
-										{project.data.name}
-									</h3>
-									<p class="text-[9px] text-gray-600 line-clamp-3 mb-2 leading-relaxed flex-1">
-										{project.data.description}
-									</p>
-									<div class="flex items-center gap-1.5 text-[9px] mt-auto">
-										{project.data.source_code && (
-											<a
-												href={project.data.source_code}
-												class="text-brand-primary hover:text-brand-primary/80 font-medium"
-												target="_blank"
-												rel="noopener"
-												title="Source Code"
-											>
-												Code
-											</a>
-										)}
-										{project.data.project_url &&
-											!project.data.tags.includes(
-												"offline",
-											) && (
-												<a
-													href={
-														project.data.project_url.startsWith(
-															"http",
-														)
-															? project.data
-																	.project_url
-															: `https://${project.data.project_url}`
-													}
-													class="text-brand-primary hover:text-brand-primary/80 font-medium"
-													target="_blank"
-													rel="noopener"
-													title="Live Project"
-												>
-													Live
-												</a>
-											)}
-										{project.data.tags.includes(
-											"offline",
-										) && (
-											<span class="ml-auto px-1 py-0.5 text-[8px] font-medium bg-red-50 text-red-600 rounded">
-												off
-											</span>
-										)}
-									</div>
+					return (
+						<Tag
+							href={mainLink || undefined}
+							target={mainLink ? "_blank" : undefined}
+							rel={mainLink ? "noopener" : undefined}
+							class:list={[
+								"flex gap-4 items-start -mx-3 px-3 py-3 rounded-lg transition-colors",
+								mainLink && "hover:bg-gray-50",
+							]}
+						>
+							{projectImage && (
+								<div class="w-20 h-20 shrink-0 rounded overflow-hidden bg-gray-100">
+									<Image
+										src={projectImage}
+										alt={`Screenshot of ${project.data.name}`}
+										class="w-full h-full object-cover"
+										loading="lazy"
+									/>
 								</div>
-							);
-						})}
-					</div>
-				</div>
-			)
-		}
+							)}
+							<div class="flex-1 min-w-0">
+								<div class="flex items-baseline justify-between gap-2">
+									<h2 class="text-lg">
+										{project.data.name}
+									</h2>
+									<span class="text-sm text-gray-400 shrink-0">
+										{project.data.year_ended}
+									</span>
+								</div>
+								<p class="text-sm text-gray-600 mt-0.5">
+									{project.data.description}
+								</p>
+								{isOffline && (
+									<span class="text-xs text-red-500 mt-1 inline-block">
+										offline
+									</span>
+								)}
+							</div>
+						</Tag>
+					);
+				})
+			}
+		</div>
 	</main>
 </Layout>
