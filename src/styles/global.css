@@ -2,23 +2,42 @@
 
 @plugin "@tailwindcss/typography";
 
+@font-face {
+  font-family: 'DINish';
+  src: url('/fonts/DINish-Variable.woff2') format('woff2-variations');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'DINish';
+  src: url('/fonts/DINish-Variable.woff2') format('woff2-variations');
+  font-weight: 100 900;
+  font-style: oblique 0deg 12deg;
+  font-display: swap;
+}
+
 @theme {
   --color-brand-primary: #3f51b5;
   --color-brand-secondary: #b1dbf0;
+  --font-sans: 'DINish', ui-sans-serif, system-ui, sans-serif;
   --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
 }
 
 .prose pre {
-    white-space: pre-wrap;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
+    white-space: pre;
+    overflow-x: auto;
     max-width: 100%;
 }
 
 .prose code {
     font-family: var(--font-mono);
-    white-space: pre-wrap;
-    word-break: break-all;
+}
+
+.prose pre code {
+    white-space: pre;
+    word-break: normal;
 }
 
 .prose :not(pre) > code {
@@ -27,6 +46,7 @@
     border: 1px solid #e5e7eb;
     border-radius: 4px;
     padding: 0.15em 0.4em;
+    overflow-wrap: break-word;
 }
 
 .prose :not(pre) > code::before,
