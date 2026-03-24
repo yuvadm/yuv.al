@@ -8,9 +8,9 @@ const { Content } = await homepage.render();
 ---
 
 <Layout description="Software engineer, entrepreneur, and technology enthusiast. Working on Namekit, experimenting with agentic coding, and sharing insights about modern web development.">
-	<main class="max-w-2xl mx-auto px-6 pb-16">
-		<p class="text-xl mb-8 text-gray-600">{subtitle}</p>
-		<div class="space-y-6 mb-16 prose prose-lg prose-a:text-brand-primary prose-a:no-underline prose-a:hover:underline">
+	<main class="home-main">
+		<p class="home-subtitle">{subtitle}</p>
+		<div class="home-content prose prose-lg prose-a:text-brand-primary prose-a:no-underline prose-a:hover:underline">
 			<Content />
 		</div>
 	</main>

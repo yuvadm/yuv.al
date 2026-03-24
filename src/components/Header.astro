@@ -1,28 +1,24 @@
 ---
 interface Props {
 	currentPath: string;
+	variant?: "default" | "fluid";
 }
 
-const { currentPath } = Astro.props;
+const { currentPath, variant = "default" } = Astro.props;
+const isFluid = variant === "fluid";
 
 const navItems = [
 	{
 		href: "/blog/",
 		label: "Blog",
-		activeColor: "text-brand-primary",
-		hoverColor: "hover:text-brand-primary",
 	},
 	{
 		href: "/projects/",
 		label: "Projects",
-		activeColor: "text-brand-primary",
-		hoverColor: "hover:text-brand-primary",
 	},
 	{
 		href: "/now/",
 		label: "Now",
-		activeColor: "text-brand-primary",
-		hoverColor: "hover:text-brand-primary",
 	},
 ];
 
@@ -31,21 +27,26 @@ function isActiveSection(itemHref: string, currentPath: string): boolean {
 }
 ---
 
-<nav class="max-w-2xl mx-auto px-6 py-8">
-	<div class="flex items-baseline justify-between">
+<nav class:list={["site-header", isFluid ? "site-header--fluid" : "max-w-2xl mx-auto px-6 py-8"]}>
+	<div class:list={[isFluid ? "site-header__inner" : "flex items-baseline justify-between"]}>
 		<a
 			href="/"
-			class="text-xl text-brand-primary hover:text-gray-800 transition-colors"
+			class:list={[
+				isFluid ? "site-header__title" : "text-xl text-brand-primary hover:text-gray-800 transition-colors",
+			]}
 		>
 			Yuval Adam
 		</a>
-		<ul class="flex gap-6 items-baseline">
+		<ul class:list={[isFluid ? "site-header__nav" : "flex gap-6 items-baseline"]}>
 			{
 				navItems.map((item) => (
 					<li>
 						<a
 							href={item.href}
-							class="text-xl text-brand-primary hover:text-brand-primary/70 transition-colors duration-200"
+							class:list={[
+								isFluid ? "site-header__link" : "text-xl text-brand-primary hover:text-brand-primary/70 transition-colors duration-200",
+								isActiveSection(item.href, currentPath) && "site-header__link--active",
+							]}
 						>
 							{item.label}
 						</a>

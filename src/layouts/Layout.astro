@@ -10,6 +10,7 @@ interface Props {
 }
 
 const { title, description } = Astro.props;
+const isHome = Astro.url.pathname === "/";
 ---
 
 <!doctype html>
@@ -38,8 +39,17 @@ const { title, description } = Astro.props;
 			data-domain="yuv.al"
 			src="https://track.magicmonad.com/js/script.js"></script>
 	</head>
-	<body class="bg-gradient-to-br from-white to-brand-secondary/5">
-		<Header currentPath={Astro.url.pathname} />
-		<slot />
+	<body class:list={["bg-gradient-to-br from-white to-brand-secondary/5", isHome && "home-fluid"]}>
+		{isHome ? (
+			<div class="viewport home-viewport">
+				<Header currentPath={Astro.url.pathname} variant="fluid" />
+				<slot />
+			</div>
+		) : (
+			<>
+				<Header currentPath={Astro.url.pathname} />
+				<slot />
+			</>
+		)}
 	</body>
 </html>
