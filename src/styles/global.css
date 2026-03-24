@@ -147,21 +147,17 @@ a {
   opacity: 1;
 }
 
-@media (orientation: landscape) {
+.site-fluid .viewport {
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+}
+
+@media (min-width: 56rem) and (orientation: landscape) {
   .site-fluid .site-header__nav {
     flex-direction: column;
     align-items: flex-start;
   }
-}
 
-@media (orientation: portrait) {
-  .site-fluid .viewport {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto 1fr;
-  }
-}
-
-@media (orientation: landscape) {
   .site-fluid .viewport {
     grid-template-columns: minmax(12rem, 0.62fr) minmax(0, 1.38fr);
     grid-template-rows: 1fr;
@@ -327,6 +323,35 @@ a {
 }
 
 @media (max-width: 42rem) {
+  .site-fluid .viewport {
+    gap: clamp(0.4rem, 1.8vw, 0.75rem);
+    padding: clamp(0.45rem, 1.8vw, 0.75rem);
+  }
+
+  .site-fluid .site-header__title {
+    font-size: clamp(1.35rem, 6.5vw, 2rem);
+  }
+
+  .site-fluid .site-header__nav {
+    gap: clamp(0.45rem, 2.4vw, 0.8rem);
+  }
+
+  .site-fluid .site-header__link {
+    font-size: clamp(0.95rem, 4vw, 1.1rem);
+  }
+
+  .site-fluid .page-main {
+    padding: clamp(0.85rem, 3.5vw, 1.2rem);
+  }
+
+  .page-home .home-subtitle {
+    font-size: clamp(1rem, 4.6vw, 1.35rem);
+  }
+
+  .page-home .home-content {
+    font-size: clamp(0.95rem, 3.9vw, 1.05rem);
+  }
+
   .site-fluid .blog-list__row,
   .site-fluid .project-row__head {
     flex-wrap: wrap;
@@ -431,7 +456,16 @@ a {
 
 .page-home .home-content {
   margin: 0;
+  max-width: 100%;
   font-size: var(--fluid-text-base);
+}
+
+.page-home .home-content p,
+.page-home .home-content li,
+.page-home .home-content a,
+.page-home .home-content :not(pre) > code {
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .page-home .home-content :where(h1, h2) {
