@@ -39,8 +39,8 @@ const isHome = Astro.url.pathname === "/";
 			data-domain="yuv.al"
 			src="https://track.magicmonad.com/js/script.js"></script>
 	</head>
-	<body class:list={["bg-gradient-to-br from-white to-brand-secondary/5", isHome ? "home-fluid" : "site-fluid"]}>
-		<div class:list={["viewport", isHome ? "home-viewport" : "page-viewport"]}>
+	<body class:list={["site-fluid", isHome && "page-home"]}>
+		<div class="viewport">
 			<Header currentPath={Astro.url.pathname} variant="fluid" />
 			<slot />
 		</div>

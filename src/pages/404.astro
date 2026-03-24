@@ -3,25 +3,12 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Page Not Found" description="The page you're looking for doesn't exist. This is a 404 error page on Yuval Adam's website.">
-	<main class="max-w-2xl mx-auto px-6 py-16">
-		<div class="text-center mx-auto">
-			<div class="space-y-6">
-				<div class="space-y-2">
-					<h1 class="text-8xl font-black text-brand-primary tracking-tight">404</h1>
-					<p class="text-2xl font-medium text-gray-800">Page Not Found</p>
-				</div>
-				<p class="text-lg text-gray-600 leading-relaxed">
-					The page you're looking for doesn't exist.
-				</p>
-				<div class="pt-4">
-					<a
-						href="/"
-						class="inline-flex items-center text-brand-primary hover:text-brand-primary/80 font-medium transition-colors"
-					>
-						← Back to home
-					</a>
-				</div>
-			</div>
+	<main class="page-main page-main--center">
+		<div class="not-found">
+			<h1 class="not-found__code">404</h1>
+			<p class="not-found__title">Page Not Found</p>
+			<p class="not-found__text">The page you're looking for doesn't exist.</p>
+			<a href="/" class="not-found__back">← Back to home</a>
 		</div>
 	</main>
 </Layout>
