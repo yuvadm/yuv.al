@@ -35,8 +35,8 @@ function getMainLink(project: any): string | null {
 ---
 
 <Layout title="Projects" description="Open source projects, web applications, and software tools developed by Yuval Adam. Explore code repositories, live demos, and technical implementations across various technologies.">
-	<main class="max-w-2xl mx-auto px-6 py-8">
-		<div class="space-y-2">
+	<main class="page-main page-main--list">
+		<div class="projects-list">
 			{
 				sortedProjects.map((project) => {
 					const projectImage = getProjectImage(project);
@@ -50,34 +50,34 @@ function getMainLink(project: any): string | null {
 							target={mainLink ? "_blank" : undefined}
 							rel={mainLink ? "noopener" : undefined}
 							class:list={[
-								"flex gap-4 items-start -mx-3 px-3 py-3 rounded-lg transition-colors",
-								mainLink && "hover:bg-gray-50",
+								"project-row",
+								mainLink && "project-row--interactive",
 							]}
 						>
 							{projectImage && (
-								<div class="w-20 h-20 shrink-0 rounded overflow-hidden bg-gray-100">
+								<div class="project-row__image-wrap">
 									<Image
 										src={projectImage}
 										alt={`Screenshot of ${project.data.name}`}
-										class="w-full h-full object-cover"
+										class="project-row__image"
 										loading="lazy"
 									/>
 								</div>
 							)}
-							<div class="flex-1 min-w-0">
-								<div class="flex items-baseline justify-between gap-2">
-									<h2 class="text-lg">
+							<div class="project-row__body">
+								<div class="project-row__head">
+									<h2 class="project-row__title">
 										{project.data.name}
 									</h2>
-									<span class="text-sm text-gray-400 shrink-0">
+									<span class="project-row__year">
 										{project.data.year_ended}
 									</span>
 								</div>
-								<p class="text-sm text-gray-600 mt-0.5">
+								<p class="project-row__description">
 									{project.data.description}
 								</p>
 								{isOffline && (
-									<span class="text-xs text-red-500 mt-1 inline-block">
+									<span class="project-row__offline">
 										offline
 									</span>
 								)}
