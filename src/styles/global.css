@@ -370,6 +370,58 @@ a {
   color: var(--ink);
 }
 
+.site-fluid .ambient-footer {
+  position: relative;
+  margin-top: clamp(2rem, 8vh, 5rem);
+  min-height: clamp(9rem, 22vh, 14rem);
+  overflow: hidden;
+}
+
+.site-fluid .ambient-footer__field {
+  position: absolute;
+  inset: 0;
+}
+
+.site-fluid .ambient-footer__sq {
+  position: absolute;
+  width: clamp(0.5rem, 1.2vw, 0.85rem);
+  aspect-ratio: 1;
+  background: #1f1f1f;
+  opacity: 0;
+  animation: ambientPixel 20s steps(1, end) infinite;
+}
+
+.site-fluid .ambient-footer__sq--1 { left: 9%; top: 28%; animation-delay: 0s; }
+.site-fluid .ambient-footer__sq--2 { left: 17%; top: 52%; animation-delay: 1.8s; }
+.site-fluid .ambient-footer__sq--3 { left: 29%; top: 36%; animation-delay: 4.3s; }
+.site-fluid .ambient-footer__sq--4 { left: 43%; top: 62%; animation-delay: 6.4s; }
+.site-fluid .ambient-footer__sq--5 { left: 56%; top: 24%; animation-delay: 8.2s; }
+.site-fluid .ambient-footer__sq--6 { left: 67%; top: 58%; animation-delay: 11.1s; }
+.site-fluid .ambient-footer__sq--7 { left: 81%; top: 33%; animation-delay: 13.7s; }
+.site-fluid .ambient-footer__sq--8 { left: 90%; top: 54%; animation-delay: 16.3s; }
+
+@keyframes ambientPixel {
+  0%,
+  100% { opacity: 0; }
+  6%,
+  12% { opacity: 0.14; }
+  13%,
+  46% { opacity: 0; }
+  47%,
+  53% { opacity: 0.18; }
+  54%,
+  86% { opacity: 0; }
+  87%,
+  92% { opacity: 0.1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-fluid .ambient-footer__sq {
+    animation: none;
+    opacity: 0.08;
+  }
+}
+
 .page-home .home-subtitle {
   margin: 0 0 var(--fluid-space);
   font-size: var(--fluid-text-lg);

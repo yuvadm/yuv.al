@@ -44,5 +44,18 @@ const isHome = Astro.url.pathname === "/";
 			<Header currentPath={Astro.url.pathname} variant="fluid" />
 			<slot />
 		</div>
+
+		<footer class="ambient-footer" aria-hidden="true">
+			<div class="ambient-footer__field">
+				<span class="ambient-footer__sq ambient-footer__sq--1"></span>
+				<span class="ambient-footer__sq ambient-footer__sq--2"></span>
+				<span class="ambient-footer__sq ambient-footer__sq--3"></span>
+				<span class="ambient-footer__sq ambient-footer__sq--4"></span>
+				<span class="ambient-footer__sq ambient-footer__sq--5"></span>
+				<span class="ambient-footer__sq ambient-footer__sq--6"></span>
+				<span class="ambient-footer__sq ambient-footer__sq--7"></span>
+				<span class="ambient-footer__sq ambient-footer__sq--8"></span>
+			</div>
+		</footer>
 	</body>
 </html>
