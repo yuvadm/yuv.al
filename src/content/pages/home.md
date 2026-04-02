@@ -11,6 +11,6 @@ I am also a licensed amateur radio operator, my callsign is [4X5UV](https://www.
 
 Some current projects I'm involved with, or otherwise just <3 - [Tel Aviv Makers Hackerspace](https://www.telavivmakers.org), [postmarketOS](https://postmarketos.org), [Arch Linux](https://archlinux.org), [CryptoParty](https://www.cryptoparty.org), [RTL-SDR](https://www.rtl-sdr.com), [Django Girls](https://djangogirls.org), [Rust TLV](https://www.meetup.com/Rust-TLV/), [Domain Name Hack Club](https://namehack.club/).
 
-Email is the best way to contact me, my address is [hello@yuv.al](mailto:hello@yuv.al).
+You can email me at [hello@yuv.al](mailto:hello@yuv.al).
 
 For other ways to get in touch, see the [contact page](/contact/).
