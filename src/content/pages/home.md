@@ -11,12 +11,6 @@ I am also a licensed amateur radio operator, my callsign is [4X5UV](https://www.
 
 Some current projects I'm involved with, or otherwise just <3 - [Tel Aviv Makers Hackerspace](https://www.telavivmakers.org), [postmarketOS](https://postmarketos.org), [Arch Linux](https://archlinux.org), [CryptoParty](https://www.cryptoparty.org), [RTL-SDR](https://www.rtl-sdr.com), [Django Girls](https://djangogirls.org), [Rust TLV](https://www.meetup.com/Rust-TLV/), [Domain Name Hack Club](https://namehack.club/).
 
-Email is the best way to contact me, my address is [hello@yuv.al](mailto:hello@yuv.al) . To contact me securely, please encrypt your message using GPG and my public key with fingerprint:
+Email is the best way to contact me, my address is [hello@yuv.al](mailto:hello@yuv.al).
 
-`55E3 6E28 5352 22E2 A206  2848 B75B 5FC2 FA1A FE15`
-
-You can find me on [nostr](https://primal.net/p/npub1yuvalh2ua35ylegck8g7shwadqnc09jvlf52axus5xxlry59m57qm7lzvf), my public key is
-
-`npub1yuvalh2ua35ylegck8g7shwadqnc09jvlf52axus5xxlry59m57qm7lzvf`
-
-My identities are signed on [Keybase](https://keybase.io/yuvadm).
+For other ways to get in touch, see the [contact page](/contact/).
